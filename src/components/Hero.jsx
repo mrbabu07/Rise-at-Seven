@@ -24,9 +24,14 @@ export function Hero({ navigation, heroImages, awardBadges }) {
   const [isMobilePanelOpen, setIsMobilePanelOpen] = useState(false)
 
   useEffect(() => {
+    heroImages.forEach((src) => {
+      const image = new Image()
+      image.src = src
+    })
+
     const heroTimer = window.setInterval(() => {
       setHeroIndex((i) => (i + 1) % heroImages.length)
-    }, 3200)
+    }, 6200)
 
     return () => clearInterval(heroTimer)
   }, [heroImages.length])
@@ -37,7 +42,7 @@ export function Hero({ navigation, heroImages, awardBadges }) {
   }, [isMobilePanelOpen])
 
   return (
-    <section className="hero hero--live">
+    <section className="hero hero--live" style={{ '--hero-bg': `url("${heroImages[heroIndex]}")` }}>
       <header className="header">
         <a className="brand" href="https://riseatseven.com/" aria-label="Rise at Seven home">
           <span className="brand__text">Rise at Seven</span>
@@ -135,7 +140,7 @@ export function Hero({ navigation, heroImages, awardBadges }) {
         )}
       </header>
 
-      <img key={heroIndex} className="hero-live__bg" src={heroImages[heroIndex]} alt="" aria-hidden="true" />
+      <img key={heroIndex} className="hero-live__bg" src={heroImages[heroIndex]} alt="" aria-hidden="true" loading="eager" fetchPriority="high" />
 
       <div className="hero-live__center">
         <div className="award-line" data-reveal>

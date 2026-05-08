@@ -8,6 +8,7 @@ export function Services({ services, featuredWork, heroImages }) {
         <h2>
           Our
           <img src="https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-23.14.49.png?w=400&h=400&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750847626&s=aec6b230473b13e5be3032641e65eb8b" alt="" className="services-live__title-img" />
+          <br className="services-title-break" />
           Services
         </h2>
         <ArrowButton href="https://riseatseven.com/services/">View All Services</ArrowButton>

@@ -10031,3 +10031,105 @@ body:not(.is-nav-hidden) .hero--live .header {
     z-index: 9 !important;
   }
 }
+
+/* Final audit overrides for the mobile menu after all earlier homepage passes. */
+@media (max-width: 700px) {
+  body.is-menu-open .mobile-panel__brand::after,
+  .hero--live .mobile-panel__brand::after {
+    content: "\2197" !important;
+    margin-left: 1px !important;
+    font-size: 0.72em !important;
+    vertical-align: baseline !important;
+  }
+
+  body.is-menu-open .mobile-panel__brand sup,
+  .hero--live .mobile-panel__brand sup {
+    display: none !important;
+  }
+
+  body.is-menu-open .mobile-panel summary,
+  body.is-menu-open .mobile-panel > a:not(.mobile-panel__cta) {
+    min-height: 40px !important;
+    font-size: clamp(34px, 9vw, 38px) !important;
+    font-weight: 560 !important;
+    line-height: 1.045 !important;
+    letter-spacing: -0.082em !important;
+  }
+
+  .services-live__title-img {
+    display: inline-block !important;
+    width: 45px !important;
+    height: 45px !important;
+    margin: 0 0 -5px 8px !important;
+    border-radius: 7px !important;
+    object-fit: cover !important;
+    vertical-align: baseline !important;
+  }
+
+  .services-title-break {
+    display: block !important;
+  }
+
+  .services-live {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .services-live__head {
+    display: contents !important;
+  }
+
+  .services-live__head h2 {
+    order: 1 !important;
+  }
+
+  .services-live__grid {
+    order: 2 !important;
+  }
+
+  .services-live__head .arrow-button {
+    order: 3 !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  .services-live .service-link__thumb,
+  .service-link__thumb {
+    position: relative !important;
+    z-index: 3 !important;
+    display: block !important;
+    width: 38px !important;
+    height: 38px !important;
+    flex: 0 0 38px !important;
+    margin: 0 12px 0 0 !important;
+    border-radius: 6px !important;
+    object-fit: cover !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .services-live .service-link__content,
+  .service-link__content {
+    position: relative !important;
+    z-index: 2 !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+  }
+
+  .services-live .service-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    min-height: 64px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(5, 5, 5, 0.12) !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    overflow: visible !important;
+  }
+
+  .services-live .service-link__text {
+    text-align: left !important;
+  }
+}
