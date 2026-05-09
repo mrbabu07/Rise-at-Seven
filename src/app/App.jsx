@@ -125,7 +125,7 @@ export function App() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: legacyLiveRef.current,
-          start: 'top top',
+          start: 'center center', // Animation starts when the section center reaches viewport center
           end: '+=350%', // Increased scroll distance to make animation play much slower
           pin: true,
           scrub: 1,
