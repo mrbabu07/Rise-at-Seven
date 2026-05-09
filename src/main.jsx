@@ -5,13 +5,13 @@ import Alpine from 'alpinejs'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'swiper/css'
 import './styles/global.css'
-import { SimpleApp } from './app/SimpleApp.jsx'
+import { App } from './app/App.jsx'
 
 window.Alpine = Alpine
 Alpine.start()
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <SimpleApp />
+    <App />
   </React.StrictMode>,
 )
