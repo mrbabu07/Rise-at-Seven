@@ -660,6 +660,8 @@
     color: #fff !important;
     font-size: 16px !important;
     letter-spacing: -0.05em !important;
+    z-index: 1000 !important;
+    position: relative !important;
   }
 
   .hero--live .desktop-nav,
