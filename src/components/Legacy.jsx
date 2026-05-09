@@ -6,41 +6,14 @@ import './Legacy.css'
 gsap.registerPlugin(ScrollTrigger)
 
 export function Legacy({ legacyCards, heroImages, legacyLiveRef, legacyCardsRefs }) {
-  useEffect(() => {
-    if (legacyLiveRef.current && legacyCardsRefs.current.length > 0 && window.matchMedia('(min-width: 701px)').matches) {
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: legacyLiveRef.current,
-          start: 'top top',
-          end: '+=350%',
-          pin: true,
-          scrub: 1,
-        }
-      })
-      
-      tl.to(legacyCardsRefs.current[0], {
-        yPercent: -150,
-        opacity: 0,
-        rotation: -15,
-        duration: 1
-      })
-      
-      tl.to(legacyCardsRefs.current[1], {
-        yPercent: -150,
-        opacity: 0,
-        rotation: -25,
-        duration: 1
-      }, "<0.8")
-    }
-
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill())
-    }
-  }, [legacyLiveRef, legacyCardsRefs])
-
   return (
     <section className="legacy-live section-pad" ref={legacyLiveRef}>
-      <p>Legacy In The Making</p>
+      <h2>
+        Legacy
+        <img src={heroImages[1] || "https://rise-atseven.transforms.svdcdn.com/production/images/138128/PR-Week-Awards.jpg"} alt="Legacy" />
+        In The Making
+      </h2>
+      <p>Our legacy is built on proven results</p>
       <div className="legacy-stack">
         {legacyCards.map((card, i) => {
           const rotations = [3, -6, -10]
