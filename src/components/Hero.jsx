@@ -4,7 +4,7 @@ import './Hero.css'
 
 export function Hero({ navigation, heroImages, awardBadges }) {
   const [heroIndex, setHeroIndex] = useState(0)
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMobilePanelOpen, setIsMobilePanelOpen] = useState(false)
 
   useEffect(() => {
     const heroTimer = window.setInterval(() => {
@@ -35,7 +35,7 @@ export function Hero({ navigation, heroImages, awardBadges }) {
         
         <button 
           className="hero--live menu-button"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setIsMobilePanelOpen(!isMobilePanelOpen)}
           aria-label="Toggle menu"
         >
           <div className="hamburger-icon">
@@ -44,6 +44,42 @@ export function Hero({ navigation, heroImages, awardBadges }) {
             <span></span>
           </div>
         </button>
+
+        {/* Mobile Panel */}
+        {isMobilePanelOpen && (
+          <div className="mobile-panel">
+            <div className="mobile-panel__top">
+              <div className="mobile-panel__brand">
+                Rise at Seven<sup>®</sup>
+              </div>
+              <button 
+                className="mobile-panel__close"
+                onClick={() => setIsMobilePanelOpen(false)}
+                aria-label="Close menu"
+              >
+                ✕
+              </button>
+            </div>
+
+            {navigation?.map((item) => (
+              <details key={item.label}>
+                <summary>
+                  {item.label}
+                  <span className="mobile-chevron"></span>
+                </summary>
+                {item.submenu && item.submenu.map((sub) => (
+                  <a key={sub.label} href={sub.href} onClick={() => setIsMobilePanelOpen(false)}>
+                    {sub.label}
+                  </a>
+                ))}
+              </details>
+            ))}
+
+            <a href="/contact" className="mobile-panel__cta" onClick={() => setIsMobilePanelOpen(false)}>
+              Get Started
+            </a>
+          </div>
+        )}
       </header>
 
       <Header navigation={navigation} />
