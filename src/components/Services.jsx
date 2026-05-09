@@ -1,4 +1,5 @@
 import { ArrowButton, ServiceLink } from './index.jsx'
+import './Services.css'
 
 export function Services({ services, featuredWork, heroImages }) {
   return (

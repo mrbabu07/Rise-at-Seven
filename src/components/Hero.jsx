@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Header } from './index.jsx'
+import './Hero.css'
 
 export function Hero({ navigation, heroImages, awardBadges }) {
   const [heroIndex, setHeroIndex] = useState(0)

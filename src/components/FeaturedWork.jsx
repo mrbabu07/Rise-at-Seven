@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ArrowButton } from './index.jsx'
+import './FeaturedWork.css'
 
 gsap.registerPlugin(ScrollTrigger)
 

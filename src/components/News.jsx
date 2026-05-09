@@ -1,4 +1,5 @@
 import { SectionTitle, ArrowButton } from './index.jsx'
+import './News.css'
 
 export function News({ news }) {
   return (
