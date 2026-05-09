@@ -81,3 +81,57 @@
   line-height: 1.12;
   letter-spacing: -0.05em;
 }
+
+/* Mobile Responsive */
+@media (max-width: 980px) {
+  .legacy-live > h2 {
+    font-size: clamp(82px, 22vw, 128px);
+  }
+}
+
+@media (max-width: 620px) {
+  .legacy-live {
+    padding: 56px 16px 48px;
+    min-height: auto;
+  }
+
+  .legacy-live > p {
+    font-size: 16px;
+    margin-bottom: 44px;
+  }
+
+  .legacy-live > h2 {
+    font-size: clamp(56px, 15vw, 120px);
+    margin-bottom: 56px;
+  }
+
+  .legacy-live > h2 img {
+    width: clamp(65px, 12vw, 110px);
+    margin: 0 14px -6px;
+    border-radius: 14px;
+  }
+
+  .legacy-stack {
+    width: min(94vw, 420px);
+    height: 620px;
+  }
+
+  .legacy-card-item {
+    padding: 48px 28px 56px;
+    border-radius: 20px;
+  }
+
+  .legacy-stack img {
+    width: 110px;
+    border-radius: 14px;
+  }
+
+  .legacy-stack h3 {
+    font-size: clamp(36px, 8.5vw, 50px);
+  }
+
+  .legacy-stack p {
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}

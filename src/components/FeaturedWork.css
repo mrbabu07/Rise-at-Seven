@@ -194,3 +194,179 @@
   transition: background 240ms ease, color 240ms ease;
   pointer-events: none;
 }
+
+.work-card:hover .work-card__pill {
+  background: rgba(0,0,0,0.06);
+  color: #1a1a1a;
+}
+
+.work-card__pill i {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.work-card__pill-sep {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: currentColor;
+  opacity: 0.35;
+  margin: 0 4px;
+}
+
+.work-explore {
+  display: flex;
+  justify-content: center;
+  padding: 0 0 112px;
+  background: #efeeec;
+}
+
+.work-explore .arrow-button {
+  min-height: 46px;
+  border: 0;
+  background: var(--white);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.work-explore .arrow-button i {
+  width: auto;
+  height: auto;
+  background: transparent;
+  color: var(--black);
+}
+
+/* Mobile Responsive */
+@media (max-width: 980px) {
+  .work-live {
+    grid-template-columns: 1fr;
+    margin-inline: 0;
+    border-radius: 22px;
+    padding: 24px 16px;
+  }
+
+  .work-live__list {
+    position: relative;
+    top: auto;
+    min-height: auto;
+    gap: 42px;
+    padding: 24px 0;
+  }
+
+  .work-card,
+  .work-card img {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 620px) {
+  .work-live {
+    margin: 0 8px 48px;
+    padding: 20px 12px 28px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .work-live__list {
+    display: block !important;
+    position: relative !important;
+    top: auto !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+
+  .work-live__list p {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .work-live__list-mask,
+  .work-live__list-inner,
+  .work-live__list a {
+    display: none !important;
+  }
+
+  .work-live__cards {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    max-height: 500px;
+    min-height: 400px;
+    padding-right: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.3) rgba(255, 255, 255, 0.1);
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    touch-action: pan-y;
+  }
+
+  .work-live__cards::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .work-live__cards::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .work-live__cards::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+  }
+
+  .work-card {
+    min-height: 340px;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+
+  .work-card img {
+    min-height: 340px;
+  }
+
+  .work-card__overlay {
+    padding: 20px;
+  }
+
+  .work-card__overlay h3 {
+    font-size: clamp(26px, 6.5vw, 44px);
+  }
+
+  .work-card__pill {
+    bottom: 14px;
+    right: 14px;
+    padding: 7px 12px;
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  .work-card__pill i {
+    font-size: 10px;
+  }
+
+  .work-card__pill-sep {
+    height: 10px;
+  }
+
+  .work-card__hover-circle {
+    width: 70px;
+    height: 70px;
+    margin: -35px 0 0 -35px;
+  }
+
+  .work-card__hover-circle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .work-explore {
+    padding: 0 16px 56px;
+  }
+}
