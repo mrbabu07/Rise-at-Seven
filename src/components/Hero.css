@@ -679,6 +679,8 @@
     cursor: pointer !important;
     padding: 0 !important;
     place-items: center !important;
+    z-index: 1000 !important;
+    position: relative !important;
   }
 
   .hero--live .hamburger-icon {
