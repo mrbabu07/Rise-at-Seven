@@ -16,12 +16,13 @@ import {
   ArrowButton,
   ClientCarousel,
   Footer,
-  Header,
-  Marquee,
   AnnouncementBar,
-  SectionTitle,
-  ServiceLink,
 } from '../components/index.jsx'
+import { Hero } from '../components/Hero.jsx'
+import { FeaturedWork } from '../components/FeaturedWork.jsx'
+import { Services } from '../components/Services.jsx'
+import { Legacy } from '../components/Legacy.jsx'
+import { News } from '../components/News.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -262,66 +263,7 @@ export function App() {
         </div>
 
         {/* ── HERO ── */}
-        <section className="hero hero--live">
-          <Header navigation={navigation} />
-
-          {/* Background image that slowly zooms */}
-          <img key={heroIndex} className="hero-live__bg" src={heroImages[heroIndex]} alt="" aria-hidden="true" />
-
-          <div className="hero-live__center">
-            {/* "#1" badge row */}
-            <div className="award-line" data-reveal>
-              <span className="award-line__dash" />
-              <strong>#1 Most Recommended Content Marketing Agency</strong>
-              <span className="award-line__dash" />
-            </div>
-
-            {/* Award logos */}
-            <div className="hero-awards" data-reveal>
-              {awardBadges.map((badge) => (
-                <div key={badge.name} className="hero-award-badge" title={badge.name}>
-                  <img
-                    src={badge.src}
-                    alt={badge.name}
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none'
-                      e.currentTarget.nextSibling.style.display = 'inline'
-                    }}
-                  />
-                  <span style={{ display: 'none' }}>{badge.fallback}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Main headline */}
-            <h1 data-reveal>
-              We Create
-              <br />
-              Category{' '}
-              <img
-                src={heroImages[heroIndex]}
-                alt=""
-                className="hero-live__inline-img"
-              />{' '}
-              Leaders
-            </h1>
-            <p data-reveal>on every searchable platform</p>
-          </div>
-
-          {/* Bottom two-col info */}
-          <div className="hero-live__bottom" data-reveal>
-            <p>
-              Organic media planners creating, distributing &amp; optimising
-              <br />
-              search-first content for SEO, Social, PR, Ai and LLM search
-            </p>
-            <p>
-              4 Global Offices serving
-              <br />
-              UK, USA (New York) &amp; EU
-            </p>
-          </div>
-        </section>
+        <Hero navigation={navigation} heroImages={heroImages} awardBadges={awardBadges} />
 
         {/* ── CLIENT LOGOS — infinite auto-scroll carousel ── */}
         <ClientCarousel logos={clientLogos} />
@@ -343,98 +285,10 @@ export function App() {
         </section>
 
         {/* ── FEATURED WORK ── */}
-        <section className="work-live" id="work">
-          {/* LEFT: sticky title list */}
-          <div className="work-live__list" data-reveal>
-            <p>Featured Work</p>
-            <div className="work-live__list-mask">
-              <div ref={workListRef} className="work-live__list-inner">
-                {featuredWork.map((item, index) => (
-                  <a
-                    key={item.title}
-                    className={index === activeWork ? 'is-active' : index < activeWork ? 'is-past' : ''}
-                    href={`https://riseatseven.com/work/${item.slug}/`}
-                  >
-                    {item.title}
-                    <span>[{item.years}]</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT: stacked cards */}
-          <div className="work-live__cards" data-lenis-prevent>
-            {featuredWork.map((item, index) => (
-              <article
-                key={item.title}
-                className="work-card"
-                data-work-index={index}
-                data-reveal
-                onPointerMove={(e) => {
-                  const rect = e.currentTarget.getBoundingClientRect();
-                  const x = e.clientX - rect.left;
-                  const y = e.clientY - rect.top;
-                  e.currentTarget.style.setProperty('--x', `${x}px`);
-                  e.currentTarget.style.setProperty('--y', `${y}px`);
-                }}
-              >
-                <a href={`https://riseatseven.com/work/${item.slug}/`} className="work-card__link" aria-label={item.title}>
-                  <div className={`work-card__hover-circle hover-circle-${index}`}>
-                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
-                  </div>
-                </a>
-                <img src={item.image} alt={item.title} loading="lazy" />
-                <div className="work-card__mobile-title">
-                  <span>[{item.years}]</span>
-                  <strong>{item.title}</strong>
-                </div>
-
-                {/* Colored hover overlay with result text */}
-                <div 
-                  className="work-card__overlay"
-                  style={{ backgroundColor: item.cardBg || '#c37e42' }}
-                >
-                  <h3>{item.result}</h3>
-                </div>
-
-                {/* Bottom-right: category pill */}
-                <div className="work-card__pill">
-                  <i className="fa-solid fa-magnifying-glass" aria-hidden="true" />
-                  <span>{item.category}</span>
-                  <span className="work-card__pill-sep" aria-hidden="true" />
-                  <i className="fa-solid fa-chart-simple" aria-hidden="true" />
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <div className="work-explore">
-          <ArrowButton href="https://riseatseven.com/work/">Explore Our Work</ArrowButton>
-        </div>
+        <FeaturedWork featuredWork={featuredWork} />
 
         {/* ── SERVICES ── */}
-        <section className="services-live section-pad" id="services">
-          <div className="services-live__head" data-reveal>
-            <h2>
-              Our
-              <img src="https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-23-at-23.14.49.png?w=400&h=400&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750847626&s=aec6b230473b13e5be3032641e65eb8b" alt="" className="services-live__title-img" />
-              Services
-            </h2>
-            <ArrowButton href="https://riseatseven.com/services/">View All Services</ArrowButton>
-          </div>
-          <div className="services-live__grid" data-reveal>
-            {services.map((service, index) => {
-              // We'll reuse featuredWork images for the service hover backgrounds
-              const bgImg = featuredWork[index]?.image || heroImages[0]
-              return <ServiceLink key={service} image={bgImg}>{service}</ServiceLink>
-            })}
-          </div>
-        </section>
+        <Services services={services} featuredWork={featuredWork} heroImages={heroImages} />
 
         {/* ── CHASING CONSUMERS NOT ALGORITHMS ── */}
         <section className="chasing" aria-label="Chasing Consumers Not Algorithms">
@@ -456,116 +310,10 @@ export function App() {
         </section>
 
         {/* ── LEGACY IN THE MAKING ── */}
-        <section className="legacy-live section-pad" ref={legacyLiveRef}>
-          <p>Legacy In The Making</p>
-          <div className="legacy-stack">
-            {legacyCards.map((card, i) => {
-              // Pre-calculate rotations and styles based on index
-              const rotations = [3, -6, -10]
-              const zIndexes = [3, 2, 1]
-              
-              return (
-                <article
-                  key={card.id}
-                  className="legacy-card-item"
-                  ref={(el) => (legacyCardsRefs.current[i] = el)}
-                  style={{
-                    backgroundColor: card.bg,
-                    color: card.color,
-                    zIndex: zIndexes[i] || 1,
-                    transform: `rotate(${rotations[i] || 0}deg)`,
-                  }}
-                >
-                  {/* Provide working fallback images */}
-                  {i === 0 && (
-                    <img
-                      src="https://rise-atseven.transforms.svdcdn.com/production/images/b2087e0cd3f699d3efc76f809ec72a85a6ab378e-1080x1350.jpg?w=800&h=800&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750847630&s=c5a1a20dcf5c67ab2aeaf69095353d79"
-                      alt="Protest sign"
-                    />
-                  )}
-                  {i === 1 && (
-                    <img
-                      src={heroImages[2] || "https://rise-atseven.transforms.svdcdn.com/production/images/138128/PR-Week-Awards.jpg"} 
-                      alt="Awards"
-                    />
-                  )}
-                  {i === 2 && (
-                    <img
-                      src={heroImages[3] || "https://rise-atseven.transforms.svdcdn.com/production/images/138128/Speed-Graphic.jpg"} 
-                      alt="Speed"
-                    />
-                  )}
-                  <h3>{card.title}</h3>
-                  <p style={{ textAlign: 'center' }}>{card.body}</p>
-                  {card.sub && (
-                    <p style={{ textAlign: 'center', marginTop: '16px' }}>{card.sub}</p>
-                  )}
-                </article>
-              )
-            })}
-          </div>
-        </section>
+        <Legacy legacyCards={legacyCards} heroImages={heroImages} legacyLiveRef={legacyLiveRef} legacyCardsRefs={legacyCardsRefs} />
 
         {/* ── WHAT'S NEW ── */}
-        <section className="news section-pad" id="blog">
-          <div className="section-head" data-reveal>
-            <SectionTitle kicker="What's">New</SectionTitle>
-            <ArrowButton href="https://riseatseven.com/blog/">Explore More Thoughts</ArrowButton>
-          </div>
-          <div className="news-grid">
-            {news.map((post, index) => (
-              <a 
-                key={post.title} 
-                className="news-card" 
-                href={post.url} 
-                data-reveal
-              >
-                <div 
-                  className="news-card__image-wrap"
-                  onPointerMove={(e) => {
-                    const rect = e.currentTarget.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    e.currentTarget.style.setProperty('--x', `${x}px`);
-                    e.currentTarget.style.setProperty('--y', `${y}px`);
-                  }}
-                >
-                  {post.image && <img src={post.image} alt="" className="news-card__bg" />}
-                  
-                  <div className="news-card__content">
-                    <span className="news-card__tag">{post.tag}</span>
-                  </div>
-
-                  {post.hoverText === 'Read Article' ? (
-                    <div className="news-card__hover-circle">
-                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
-                      </svg>
-                    </div>
-                  ) : (
-                    <div className="news-card__hover-pill">
-                      <i className="fa-solid fa-magnifying-glass" aria-hidden="true" />
-                      <span>{post.hoverText}</span>
-                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginLeft: '4px'}}>
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7 7 17 7 17 17"></polyline>
-                      </svg>
-                    </div>
-                  )}
-                </div>
-
-                <div className="news-card__meta">
-                  <div className="news-card__bottom">
-                    {post.authorImage && <img src={post.authorImage} alt="" className="news-card__author-img" />}
-                    <small>{post.author} <i className="fa-regular fa-clock" aria-hidden="true" /> 3 mins</small>
-                  </div>
-                  <h3>{post.title}</h3>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
+        <News news={news} />
 
         <Footer />
       </main>
