@@ -272,10 +272,12 @@ export function App() {
         <section className="manifesto section-pad">
           <p data-reveal>
             A global team of search-first content marketers engineering semantic relevancy and
-            category signals for both the internet and people.
+            category signals for both the internet and people
           </p>
           <h2 data-reveal>
-            Driving Demand &amp; Discovery
+            Driving Demand &amp;
+            <br />
+            Discovery
             <img src={heroMedia.floating} alt="" className="manifesto__inline-img" />
           </h2>
           <div className="button-row manifesto__buttons" data-reveal>

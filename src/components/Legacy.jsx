@@ -8,12 +8,12 @@ gsap.registerPlugin(ScrollTrigger)
 export function Legacy({ legacyCards, heroImages, legacyLiveRef, legacyCardsRefs }) {
   return (
     <section className="legacy-live section-pad" ref={legacyLiveRef}>
-      <h2>
+      {/* <h2>
         Legacy
         <img src={heroImages[1] || "https://rise-atseven.transforms.svdcdn.com/production/images/138128/PR-Week-Awards.jpg"} alt="Legacy" />
         In The Making
-      </h2>
-      <p>Our legacy is built on proven results</p>
+      </h2> */}
+      <p>Legacy In The Making</p>
       <div className="legacy-stack">
         {legacyCards.map((card, i) => {
           const rotations = [3, -6, -10]

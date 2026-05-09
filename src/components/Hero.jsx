@@ -14,8 +14,6 @@ const toChildHref = (child) => {
   return `https://riseatseven.com/${slug}/`
 }
 
-const searchPlatforms = ['Google', 'ChatGPT', 'Gemini', 'TikTok', 'YouTube', 'Pinterest', 'GIPHY', 'reddit', 'amazon']
-
 export function Hero({ navigation, heroImages, awardBadges }) {
   const [heroIndex, setHeroIndex] = useState(0)
   const [isMobilePanelOpen, setIsMobilePanelOpen] = useState(false)
@@ -71,7 +69,7 @@ export function Hero({ navigation, heroImages, awardBadges }) {
           <div className="mobile-panel" role="dialog" aria-label="Mobile navigation">
             <div className="mobile-panel__top">
               <a className="mobile-panel__brand" href="https://riseatseven.com/" onClick={() => setIsMobilePanelOpen(false)}>
-                Rise at Seven<sup>®</sup>
+                Rise at Seven<sup>&reg;</sup>
               </a>
               <button
                 className="mobile-panel__close"
@@ -79,7 +77,7 @@ export function Hero({ navigation, heroImages, awardBadges }) {
                 aria-label="Close menu"
                 type="button"
               >
-                ×
+                &times;
               </button>
             </div>
 
@@ -125,9 +123,9 @@ export function Hero({ navigation, heroImages, awardBadges }) {
               <img
                 src={badge.src}
                 alt={badge.name}
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                  e.currentTarget.nextSibling.style.display = 'inline'
+                onError={(event) => {
+                  event.currentTarget.style.display = 'none'
+                  event.currentTarget.nextSibling.style.display = 'inline'
                 }}
               />
               <span style={{ display: 'none' }}>{badge.fallback}</span>
@@ -147,11 +145,6 @@ export function Hero({ navigation, heroImages, awardBadges }) {
           Leaders
         </h1>
         <p data-reveal>on every searchable platform</p>
-        <div className="hero-platforms" aria-hidden="true" data-reveal>
-          {searchPlatforms.map((platform) => (
-            <span key={platform}>{platform}</span>
-          ))}
-        </div>
       </div>
 
       <div className="hero-live__bottom" data-reveal>
