@@ -648,6 +648,10 @@
     color: #050505 !important;
     backdrop-filter: blur(14px) !important;
     border-bottom: 1px solid rgba(5,5,5,0.12) !important;
+    display: grid !important;
+    grid-template-columns: auto 1fr auto !important;
+    align-items: center !important;
+    gap: clamp(22px, 3vw, 56px) !important;
   }
 
   .hero--live .brand {
@@ -656,13 +660,30 @@
     letter-spacing: -0.05em !important;
   }
 
+  .hero--live .desktop-nav,
+  .hero--live .header-cta {
+    display: none !important;
+  }
+
   .hero--live .menu-button {
+    display: inline-grid !important;
+    justify-self: end !important;
     color: #050505 !important;
     transition: opacity 160ms ease, transform 160ms ease !important;
   }
 
+  .hero--live .hamburger-icon {
+    display: flex !important;
+    width: 20px !important;
+    height: 14px !important;
+  }
+
   .hero--live .hamburger-icon span {
+    display: block !important;
+    width: 100% !important;
+    height: 2px !important;
     background: #050505 !important;
+    border-radius: 1px !important;
   }
 
   body.is-mobile-scrolling .hero--live .menu-button {
