@@ -644,9 +644,10 @@
     z-index: 999 !important;
     min-height: 49px !important;
     padding: 0 14px !important;
-    background: transparent !important;
+    background: rgba(0, 0, 0, 0.3) !important;
     color: #fff !important;
-    backdrop-filter: none !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
     border-bottom: none !important;
     display: grid !important;
     grid-template-columns: auto 1fr auto !important;
