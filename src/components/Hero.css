@@ -641,7 +641,7 @@
     top: 0 !important;
     left: 0 !important;
     right: 0 !important;
-    z-index: 120 !important;
+    z-index: 999 !important;
     min-height: 49px !important;
     padding: 0 14px !important;
     background: transparent !important;
@@ -653,6 +653,7 @@
     align-items: center !important;
     gap: clamp(22px, 3vw, 56px) !important;
     width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .hero--live .brand {
