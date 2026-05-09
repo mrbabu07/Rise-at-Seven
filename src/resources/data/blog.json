@@ -1,0 +1,37 @@
+{
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "Ryan McNamara Is Now Rise at Seven's Global Operations Director",
+      "slug": "global-operations-director-promotion",
+      "category": "News",
+      "author": "Carrie Rose",
+      "date": "2025-05-04",
+      "image": "📰",
+      "excerpt": "Exciting news as Ryan McNamara takes on the role of Global Operations Director",
+      "link": "/blog/global-operations-director-promotion"
+    },
+    {
+      "id": 2,
+      "title": "Rise at Seven Appointed by Coneys to Drive Demand and Retail Growth",
+      "slug": "coneys-chooses-riseatseven-for-demand-brief-2",
+      "category": "Food/Hospitality/Drink",
+      "author": "Ray Saddiq",
+      "date": "2025-05-04",
+      "image": "🍫",
+      "excerpt": "Rise at Seven partners with Coneys to drive demand and retail growth in the chocolate confectionery category",
+      "link": "/blog/coneys-chooses-riseatseven-for-demand-brief-2"
+    },
+    {
+      "id": 3,
+      "title": "Rise at Seven Appointed by Langtins to drive demand and retail growth for Noomz",
+      "slug": "noomz-chooses-riseatseven-for-demand-brief",
+      "category": "Food/Hospitality/Drink",
+      "author": "Carrie Rose",
+      "date": "2025-05-04",
+      "image": "🍜",
+      "excerpt": "Rise at Seven partners with Langtins to drive demand and retail growth for Noomz",
+      "link": "/blog/noomz-chooses-riseatseven-for-demand-brief"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "mainNav": [
+    {
+      "label": "Services",
+      "link": "/services",
+      "hasDropdown": true,
+      "dropdown": [
+        {
+          "label": "Search & Growth Strategy",
+          "link": "/services/strategy-growth"
+        },
+        {
+          "label": "Onsite SEO",
+          "link": "/services/onsite-seo"
+        },
+        {
+          "label": "Content Experience",
+          "link": "/services/content-experience"
+        },
+        {
+          "label": "B2B Marketing",
+          "link": "/services/b2b-marketing"
+        },
+        {
+          "label": "Digital PR",
+          "link": "/services/digital-pr"
+        },
+        {
+          "label": "Social Media & Campaigns",
+          "link": "/services/social"
+        },
+        {
+          "label": "Data & Insights",
+          "link": "/services/data-insights"
+        },
+        {
+          "label": "Social SEO/Search",
+          "link": "/services/social-seo-tiktok-youtube"
+        },
+        {
+          "label": "View All Services",
+          "link": "/services",
+          "isCTA": true
+        }
+      ]
+    },
+    {
+      "label": "International",
+      "link": "/international",
+      "hasDropdown": true,
+      "dropdown": [
+        {
+          "label": "US Digital PR",
+          "link": "/international/us-digital-pr"
+        },
+        {
+          "label": "Spain Digital PR",
+          "link": "/international/spain-digital-pr"
+        },
+        {
+          "label": "Germany Digital PR",
+          "link": "/international/germany-digital-pr"
+        },
+        {
+          "label": "Netherlands Digital PR",
+          "link": "/international/netherlands-digital-pr"
+        }
+      ]
+    },
+    {
+      "label": "About",
+      "link": "/about",
+      "hasDropdown": true,
+      "dropdown": [
+        {
+          "label": "About Us",
+          "link": "/about"
+        },
+        {
+          "label": "Meet The Risers",
+          "link": "/meet-the-team"
+        },
+        {
+          "label": "Culture",
+          "link": "/culture"
+        },
+        {
+          "label": "Testimonials",
+          "link": "/testimonials"
+        }
+      ]
+    },
+    {
+      "label": "Work",
+      "link": "/work",
+      "hasDropdown": false
+    },
+    {
+      "label": "Blog",
+      "link": "/blog",
+      "hasDropdown": false
+    }
+  ],
+  "cta": {
+    "label": "Get In Touch",
+    "link": "/contact"
+  }
+}

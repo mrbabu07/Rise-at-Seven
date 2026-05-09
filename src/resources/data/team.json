@@ -1,0 +1,44 @@
+{
+  "teamMembers": [
+    {
+      "id": 1,
+      "name": "Carrie Rose",
+      "role": "Founder & CEO",
+      "bio": "Visionary leader driving Rise at Seven's mission",
+      "image": "👩‍💼",
+      "social": {
+        "linkedin": "https://linkedin.com",
+        "twitter": "https://twitter.com"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Ryan McNamara",
+      "role": "Global Operations Director",
+      "bio": "Leading global operations and team growth",
+      "image": "👨‍💼",
+      "social": {
+        "linkedin": "https://linkedin.com",
+        "twitter": "https://twitter.com"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Ray Saddiq",
+      "role": "Senior Strategist",
+      "bio": "Expert in demand generation and retail growth",
+      "image": "👨‍💼",
+      "social": {
+        "linkedin": "https://linkedin.com",
+        "twitter": "https://twitter.com"
+      }
+    }
+  ],
+  "stats": {
+    "globalOffices": 4,
+    "awardsWon": 79,
+    "teamSize": "50+",
+    "yearsInBusiness": 6,
+    "clientsServed": "100+"
+  }
+}

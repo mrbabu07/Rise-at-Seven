@@ -1,0 +1,68 @@
+{
+  "coreServices": [
+    {
+      "id": 1,
+      "name": "Search & Growth Strategy",
+      "slug": "strategy-growth",
+      "description": "Comprehensive search strategy and growth planning",
+      "icon": "📊",
+      "link": "/services/strategy-growth"
+    },
+    {
+      "id": 2,
+      "name": "Onsite SEO",
+      "slug": "onsite-seo",
+      "description": "Technical and on-page SEO optimization",
+      "icon": "🔍",
+      "link": "/services/onsite-seo"
+    },
+    {
+      "id": 3,
+      "name": "Content Experience",
+      "slug": "content-experience",
+      "description": "Creating engaging content experiences",
+      "icon": "✍️",
+      "link": "/services/content-experience"
+    },
+    {
+      "id": 4,
+      "name": "B2B Marketing",
+      "slug": "b2b-marketing",
+      "description": "Business-to-business marketing solutions",
+      "icon": "🤝",
+      "link": "/services/b2b-marketing"
+    },
+    {
+      "id": 5,
+      "name": "Digital PR",
+      "slug": "digital-pr",
+      "description": "Digital public relations and media outreach",
+      "icon": "📢",
+      "link": "/services/digital-pr"
+    },
+    {
+      "id": 6,
+      "name": "Social Media & Campaigns",
+      "slug": "social",
+      "description": "Social media strategy and campaign management",
+      "icon": "📱",
+      "link": "/services/social"
+    },
+    {
+      "id": 7,
+      "name": "Data & Insights",
+      "slug": "data-insights",
+      "description": "Data analysis and actionable insights",
+      "icon": "📈",
+      "link": "/services/data-insights"
+    },
+    {
+      "id": 8,
+      "name": "Social SEO/Search",
+      "slug": "social-seo-tiktok-youtube",
+      "description": "Social platform SEO and search optimization",
+      "icon": "🎬",
+      "link": "/services/social-seo-tiktok-youtube"
+    }
+  ]
+}

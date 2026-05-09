@@ -1,0 +1,221 @@
+{
+  "logos": {
+    "brand": {
+      "main": "/images/logos/rise-at-seven-logo.png",
+      "icon": "/images/logos/rise-at-seven-icon.png",
+      "dark": "/images/logos/rise-at-seven-dark.png",
+      "light": "/images/logos/rise-at-seven-light.png"
+    },
+    "clients": {
+      "sixt": "/images/logos/clients/sixt-logo.png",
+      "dojo": "/images/logos/clients/dojo-logo.png",
+      "redBull": "/images/logos/clients/red-bull-logo.png",
+      "jdSports": "/images/logos/clients/jd-sports-logo.png",
+      "parkdean": "/images/logos/clients/parkdean-logo.png",
+      "revolution": "/images/logos/clients/revolution-beauty-logo.png",
+      "lloyds": "/images/logos/clients/lloyds-pharmacy-logo.png",
+      "plt": "/images/logos/clients/prettylittlething-logo.png"
+    },
+    "awards": {
+      "globalSearch": "/images/logos/awards/global-search-awards.png",
+      "drumAwards": "/images/logos/awards/drum-awards.png",
+      "ukSocialMedia": "/images/logos/awards/uk-social-media-awards.png",
+      "contentMarketing": "/images/logos/awards/content-marketing-awards.png"
+    },
+    "social": {
+      "facebook": "/images/logos/social/facebook.svg",
+      "twitter": "/images/logos/social/twitter.svg",
+      "linkedin": "/images/logos/social/linkedin.svg",
+      "youtube": "/images/logos/social/youtube.svg",
+      "tiktok": "/images/logos/social/tiktok.svg",
+      "instagram": "/images/logos/social/instagram.svg"
+    }
+  },
+  "caseStudies": {
+    "sixt": {
+      "featured": "/images/case-studies/sixt/featured.jpg",
+      "thumbnail": "/images/case-studies/sixt/thumbnail.jpg",
+      "gallery": [
+        "/images/case-studies/sixt/gallery-1.jpg",
+        "/images/case-studies/sixt/gallery-2.jpg",
+        "/images/case-studies/sixt/gallery-3.jpg"
+      ]
+    },
+    "dojo": {
+      "featured": "/images/case-studies/dojo/featured.jpg",
+      "thumbnail": "/images/case-studies/dojo/thumbnail.jpg",
+      "gallery": [
+        "/images/case-studies/dojo/gallery-1.jpg",
+        "/images/case-studies/dojo/gallery-2.jpg",
+        "/images/case-studies/dojo/gallery-3.jpg"
+      ]
+    },
+    "magnetTrade": {
+      "featured": "/images/case-studies/magnet-trade/featured.jpg",
+      "thumbnail": "/images/case-studies/magnet-trade/thumbnail.jpg",
+      "gallery": [
+        "/images/case-studies/magnet-trade/gallery-1.jpg",
+        "/images/case-studies/magnet-trade/gallery-2.jpg",
+        "/images/case-studies/magnet-trade/gallery-3.jpg"
+      ]
+    },
+    "esim": {
+      "featured": "/images/case-studies/esim/featured.jpg",
+      "thumbnail": "/images/case-studies/esim/thumbnail.jpg",
+      "gallery": [
+        "/images/case-studies/esim/gallery-1.jpg",
+        "/images/case-studies/esim/gallery-2.jpg",
+        "/images/case-studies/esim/gallery-3.jpg"
+      ]
+    },
+    "jdSports": {
+      "featured": "/images/case-studies/jd-sports/featured.jpg",
+      "thumbnail": "/images/case-studies/jd-sports/thumbnail.jpg",
+      "gallery": [
+        "/images/case-studies/jd-sports/gallery-1.jpg",
+        "/images/case-studies/jd-sports/gallery-2.jpg",
+        "/images/case-studies/jd-sports/gallery-3.jpg"
+      ]
+    },
+    "parkdean": {
+      "featured": "/images/case-studies/parkdean/featured.jpg",
+      "thumbnail": "/images/case-studies/parkdean/thumbnail.jpg",
+      "gallery": [
+        "/images/case-studies/parkdean/gallery-1.jpg",
+        "/images/case-studies/parkdean/gallery-2.jpg",
+        "/images/case-studies/parkdean/gallery-3.jpg"
+      ]
+    },
+    "pooky": {
+      "featured": "/images/case-studies/pooky/featured.jpg",
+      "thumbnail": "/images/case-studies/pooky/thumbnail.jpg",
+      "gallery": [
+        "/images/case-studies/pooky/gallery-1.jpg",
+        "/images/case-studies/pooky/gallery-2.jpg",
+        "/images/case-studies/pooky/gallery-3.jpg"
+      ]
+    },
+    "revolution": {
+      "featured": "/images/case-studies/revolution/featured.jpg",
+      "thumbnail": "/images/case-studies/revolution/thumbnail.jpg",
+      "gallery": [
+        "/images/case-studies/revolution/gallery-1.jpg",
+        "/images/case-studies/revolution/gallery-2.jpg",
+        "/images/case-studies/revolution/gallery-3.jpg"
+      ]
+    },
+    "lloyds": {
+      "featured": "/images/case-studies/lloyds/featured.jpg",
+      "thumbnail": "/images/case-studies/lloyds/thumbnail.jpg",
+      "gallery": [
+        "/images/case-studies/lloyds/gallery-1.jpg",
+        "/images/case-studies/lloyds/gallery-2.jpg",
+        "/images/case-studies/lloyds/gallery-3.jpg"
+      ]
+    },
+    "plt": {
+      "featured": "/images/case-studies/plt/featured.jpg",
+      "thumbnail": "/images/case-studies/plt/thumbnail.jpg",
+      "gallery": [
+        "/images/case-studies/plt/gallery-1.jpg",
+        "/images/case-studies/plt/gallery-2.jpg",
+        "/images/case-studies/plt/gallery-3.jpg"
+      ]
+    }
+  },
+  "team": {
+    "carrieRose": {
+      "photo": "/images/team/carrie-rose.jpg",
+      "thumbnail": "/images/team/carrie-rose-thumb.jpg"
+    },
+    "ryanMcnamara": {
+      "photo": "/images/team/ryan-mcnamara.jpg",
+      "thumbnail": "/images/team/ryan-mcnamara-thumb.jpg"
+    },
+    "raySaddiq": {
+      "photo": "/images/team/ray-saddiq.jpg",
+      "thumbnail": "/images/team/ray-saddiq-thumb.jpg"
+    }
+  },
+  "blog": {
+    "post1": {
+      "featured": "/images/blog/ryan-mcnamara-promotion.jpg",
+      "thumbnail": "/images/blog/ryan-mcnamara-promotion-thumb.jpg"
+    },
+    "post2": {
+      "featured": "/images/blog/coneys-demand.jpg",
+      "thumbnail": "/images/blog/coneys-demand-thumb.jpg"
+    },
+    "post3": {
+      "featured": "/images/blog/noomz-demand.jpg",
+      "thumbnail": "/images/blog/noomz-demand-thumb.jpg"
+    }
+  },
+  "services": {
+    "strategy": {
+      "icon": "/images/services/strategy-icon.svg",
+      "featured": "/images/services/strategy-featured.jpg"
+    },
+    "seo": {
+      "icon": "/images/services/seo-icon.svg",
+      "featured": "/images/services/seo-featured.jpg"
+    },
+    "content": {
+      "icon": "/images/services/content-icon.svg",
+      "featured": "/images/services/content-featured.jpg"
+    },
+    "b2b": {
+      "icon": "/images/services/b2b-icon.svg",
+      "featured": "/images/services/b2b-featured.jpg"
+    },
+    "pr": {
+      "icon": "/images/services/pr-icon.svg",
+      "featured": "/images/services/pr-featured.jpg"
+    },
+    "social": {
+      "icon": "/images/services/social-icon.svg",
+      "featured": "/images/services/social-featured.jpg"
+    },
+    "data": {
+      "icon": "/images/services/data-icon.svg",
+      "featured": "/images/services/data-featured.jpg"
+    },
+    "socialSeo": {
+      "icon": "/images/services/social-seo-icon.svg",
+      "featured": "/images/services/social-seo-featured.jpg"
+    }
+  },
+  "pages": {
+    "hero": {
+      "background": "/images/pages/hero-background.jpg",
+      "banner": "/images/pages/hero-banner.jpg"
+    },
+    "about": {
+      "team": "/images/pages/about-team.jpg",
+      "office": "/images/pages/about-office.jpg",
+      "culture": "/images/pages/about-culture.jpg"
+    },
+    "contact": {
+      "map": "/images/pages/contact-map.jpg",
+      "office": "/images/pages/contact-office.jpg"
+    }
+  },
+  "icons": {
+    "arrow": "/images/icons/arrow.svg",
+    "chevron": "/images/icons/chevron.svg",
+    "check": "/images/icons/check.svg",
+    "close": "/images/icons/close.svg",
+    "menu": "/images/icons/menu.svg",
+    "search": "/images/icons/search.svg",
+    "phone": "/images/icons/phone.svg",
+    "email": "/images/icons/email.svg",
+    "location": "/images/icons/location.svg",
+    "calendar": "/images/icons/calendar.svg"
+  },
+  "seo": {
+    "ogImage": "/images/seo/og-image.jpg",
+    "twitterImage": "/images/seo/twitter-image.jpg",
+    "favicon": "/images/seo/favicon.ico",
+    "appleTouchIcon": "/images/seo/apple-touch-icon.png"
+  }
+}

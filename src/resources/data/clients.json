@@ -1,0 +1,60 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Sixt",
+      "logo": "🚗",
+      "category": "Car Rental",
+      "link": "/work/sixt"
+    },
+    {
+      "id": 2,
+      "name": "Dojo",
+      "logo": "💳",
+      "category": "Card Machines",
+      "link": "/work/dojo"
+    },
+    {
+      "id": 3,
+      "name": "Red Bull",
+      "logo": "🔴",
+      "category": "Beverages",
+      "link": "/work/red-bull"
+    },
+    {
+      "id": 4,
+      "name": "JD Sports",
+      "logo": "👟",
+      "category": "Retail",
+      "link": "/work/jd-sports"
+    },
+    {
+      "id": 5,
+      "name": "Parkdean Resorts",
+      "logo": "🏖️",
+      "category": "Travel & Leisure",
+      "link": "/work/parkdean-resorts-easter-breaks"
+    },
+    {
+      "id": 6,
+      "name": "Revolution Beauty",
+      "logo": "💄",
+      "category": "Beauty",
+      "link": "/work/revolution-beauty"
+    },
+    {
+      "id": 7,
+      "name": "Lloyds Pharmacy",
+      "logo": "🏥",
+      "category": "Healthcare",
+      "link": "/work/lloyds-pharmacy"
+    },
+    {
+      "id": 8,
+      "name": "PrettyLittleThing",
+      "logo": "👗",
+      "category": "Fashion",
+      "link": "/work/prettylittlething"
+    }
+  ]
+}

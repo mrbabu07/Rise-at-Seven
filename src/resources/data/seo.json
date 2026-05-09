@@ -1,0 +1,57 @@
+{
+  "pages": {
+    "home": {
+      "title": "Rise at Seven | Award Winning Search-First Content Marketing Agency",
+      "description": "Award-winning search-first content marketing agency. Organic media planners creating, distributing & optimising search-first content for SEO, Social, PR, AI and LLM search.",
+      "keywords": "SEO, content marketing, digital PR, social media, search marketing, organic search",
+      "ogImage": "https://riseatseven.com/og-image.jpg",
+      "twitterImage": "https://riseatseven.com/twitter-image.jpg"
+    },
+    "services": {
+      "title": "Services | Rise at Seven",
+      "description": "Comprehensive digital marketing services including SEO, Digital PR, Social Media, Content Strategy, and more.",
+      "keywords": "digital marketing services, SEO services, content marketing, digital PR"
+    },
+    "work": {
+      "title": "Our Work | Rise at Seven",
+      "description": "Explore our award-winning case studies and client success stories.",
+      "keywords": "case studies, client work, digital marketing results, SEO success"
+    },
+    "about": {
+      "title": "About Us | Rise at Seven",
+      "description": "Learn about Rise at Seven, our mission, team, and why we're different.",
+      "keywords": "about us, team, company culture, digital marketing agency"
+    },
+    "blog": {
+      "title": "Blog | Rise at Seven",
+      "description": "Latest insights, news, and thoughts on digital marketing and search.",
+      "keywords": "digital marketing blog, SEO insights, content marketing tips"
+    },
+    "contact": {
+      "title": "Contact Us | Rise at Seven",
+      "description": "Get in touch with Rise at Seven. We'd love to hear from you.",
+      "keywords": "contact, get in touch, digital marketing agency contact"
+    }
+  },
+  "schema": {
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Rise at Seven",
+      "url": "https://riseatseven.com",
+      "logo": "https://riseatseven.com/logo.png",
+      "description": "Award-winning search-first content marketing agency",
+      "sameAs": [
+        "https://www.facebook.com/riseatseven",
+        "https://x.com/riseatseven",
+        "https://www.linkedin.com/company/riseatseven/",
+        "https://www.instagram.com/riseatseven/"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "GB",
+        "addressLocality": "London"
+      }
+    }
+  }
+}

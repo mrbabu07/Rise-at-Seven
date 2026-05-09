@@ -1,0 +1,40 @@
+{
+  "offices": [
+    {
+      "id": 1,
+      "city": "London",
+      "country": "UK",
+      "address": "London, UK",
+      "mapsLink": "https://g.co/kgs/hsv6LhR",
+      "timezone": "GMT",
+      "icon": "🇬🇧"
+    },
+    {
+      "id": 2,
+      "city": "Sheffield",
+      "country": "UK",
+      "address": "Sheffield, UK",
+      "mapsLink": "https://g.co/kgs/4Br7JaS",
+      "timezone": "GMT",
+      "icon": "🇬🇧"
+    },
+    {
+      "id": 3,
+      "city": "Manchester",
+      "country": "UK",
+      "address": "Manchester, UK",
+      "mapsLink": "https://g.co/kgs/9vh5imK",
+      "timezone": "GMT",
+      "icon": "🇬🇧"
+    },
+    {
+      "id": 4,
+      "city": "New York",
+      "country": "USA",
+      "address": "New York, USA",
+      "mapsLink": "https://g.co/kgs/NxzhAKU",
+      "timezone": "EST",
+      "icon": "🇺🇸"
+    }
+  ]
+}

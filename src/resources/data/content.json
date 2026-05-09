@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "alertBanner": "🚨 Where are your customers actually searching? Download the report",
+    "mainHeading": "Award Winning",
+    "mainHeadingHighlight": "Search-First Content",
+    "mainHeadingEnd": "Marketing Agency",
+    "subheading": "Organic media planners creating, distributing & optimising search-first content for SEO, Social, PR, AI and LLM search",
+    "ctaPrimary": "Get In Touch",
+    "ctaSecondary": "View Our Work"
+  },
+  "sections": {
+    "services": {
+      "title": "Core Services",
+      "subtitle": "Comprehensive solutions for your growth"
+    },
+    "featuredWork": {
+      "title": "Featured Work",
+      "subtitle": "Swipe through our latest case studies"
+    },
+    "international": {
+      "title": "International Services",
+      "subtitle": "Global reach, local expertise"
+    },
+    "team": {
+      "title": "Meet The Team",
+      "subtitle": "A global team of search-first content marketers"
+    },
+    "stats": {
+      "title": "By The Numbers",
+      "subtitle": "Our impact and achievements"
+    },
+    "clients": {
+      "title": "The Agency Behind...",
+      "subtitle": "Trusted by leading brands worldwide"
+    },
+    "pioneers": {
+      "title": "Our Values",
+      "subtitle": "What drives us forward"
+    },
+    "blog": {
+      "title": "Latest News & Insights",
+      "subtitle": "Stay updated with Rise at Seven"
+    }
+  },
+  "pioneers": {
+    "pioneers": {
+      "title": "Pioneers",
+      "icon": "🚀",
+      "description": "We're dedicated to creating the industry narrative that others follow 3 years from now. We paved the path for creative SEO, multi-channel search with Digital PR, and Social Search and we will continue to do it. We're on a mission to be the first search-first agency to win a Cannes Lion disrupting the status quo."
+    },
+    "awardWinning": {
+      "title": "Award Winning",
+      "icon": "🏆",
+      "description": "A roll top bath full of 79 awards. Voted The Drum's best agency outside of London. We are official judges for industry awards including Global Search Awards and Global Content Marketing Awards."
+    },
+    "speed": {
+      "title": "Speed",
+      "icon": "⚡",
+      "description": "People ask us why we are called Rise at Seven? Ever heard the saying Early Bird catches the worm? Google is moving fast, but humans are moving faster. We chase consumers, not algorithms. We've created a service which takes ideas to result within 60 minutes."
+    }
+  },
+  "cta": {
+    "heading": "Chasing Consumers Not Algorithms",
+    "subheading": "Ready to transform your digital presence?",
+    "buttonText": "Get In Touch",
+    "buttonLink": "/contact"
+  }
+}

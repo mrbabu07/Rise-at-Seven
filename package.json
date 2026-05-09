@@ -1,0 +1,33 @@
+{
+  "name": "rise-at-seven-clone",
+  "version": "1.0.0",
+  "description": "Rise at Seven inspired agency website built with Vite, React, Tailwind, GSAP, Lenis, Alpine, Swiper and Barba.",
+  "main": "src/main.jsx",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 3000",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "dependencies": {
+    "@barba/core": "2.10.3",
+    "@fortawesome/fontawesome-free": "^7.2.0",
+    "@tailwindcss/vite": "^4.2.4",
+    "@vitejs/plugin-react": "^6.0.1",
+    "alpinejs": "3.14.8",
+    "core-js": "3.32.2",
+    "gsap": "3.13.0",
+    "lenis": "1.3.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "swiper": "^12.1.4",
+    "tailwindcss": "^4.2.4",
+    "vite": "^8.0.10"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1"
+  }
+}

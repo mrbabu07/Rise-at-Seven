@@ -1,0 +1,124 @@
+{
+  "featuredWork": [
+    {
+      "id": 1,
+      "title": "Sixt",
+      "category": "Car Rental",
+      "description": "An extra 3m clicks regionally through SEO",
+      "year": "2023-2025",
+      "image": "🚗",
+      "color": "from-blue-400 to-blue-600",
+      "link": "/work/sixt",
+      "results": "3M+ additional clicks",
+      "services": ["SEO", "Search Strategy"]
+    },
+    {
+      "id": 2,
+      "title": "Dojo",
+      "category": "Card Machines",
+      "description": "A B2B success story for Dojo card machines",
+      "year": "2021-2025",
+      "image": "💳",
+      "color": "from-purple-400 to-purple-600",
+      "link": "/work/dojo",
+      "results": "B2B market leadership",
+      "services": ["B2B Marketing", "Digital PR"]
+    },
+    {
+      "id": 3,
+      "title": "Magnet Trade",
+      "category": "B2B",
+      "description": "A full service SEO success story 170%+ increase",
+      "year": "2023-2024",
+      "image": "⚙️",
+      "color": "from-orange-400 to-orange-600",
+      "link": "/work/magnet-trade-b2b",
+      "results": "170%+ increase",
+      "services": ["SEO", "Content"]
+    },
+    {
+      "id": 4,
+      "title": "E-SIM",
+      "category": "E-SIM",
+      "description": "Leading E Sim brand globally increasing visibility",
+      "year": "2023-2025",
+      "image": "📡",
+      "color": "from-green-400 to-green-600",
+      "link": "/work/esim-case-study",
+      "results": "Global visibility increase",
+      "services": ["SEO", "Social Search"]
+    },
+    {
+      "id": 5,
+      "title": "JD Sports",
+      "category": "Trainers",
+      "description": "65% up YoY in clicks for JDSports FR, IT, ES",
+      "year": "2025",
+      "image": "👟",
+      "color": "from-red-400 to-red-600",
+      "link": "/work/jd-sports",
+      "results": "65% YoY increase",
+      "services": ["International SEO", "Multi-channel"]
+    },
+    {
+      "id": 6,
+      "title": "Parkdean Resorts",
+      "category": "Easter Breaks",
+      "description": "Dominating Google and AI search",
+      "year": "2019-2025",
+      "image": "🏖️",
+      "color": "from-cyan-400 to-cyan-600",
+      "link": "/work/parkdean-resorts-easter-breaks",
+      "results": "Category dominance",
+      "services": ["SEO", "Content", "Social"]
+    },
+    {
+      "id": 7,
+      "title": "Pooky",
+      "category": "Rechargeable Lights",
+      "description": "Driving demand for Pooky Rechargeable Lights",
+      "year": "2025",
+      "image": "💡",
+      "color": "from-yellow-400 to-yellow-600",
+      "link": "/work/pooky",
+      "results": "Demand generation",
+      "services": ["Content", "Social"]
+    },
+    {
+      "id": 8,
+      "title": "Revolution Beauty",
+      "category": "Beauty Dupes",
+      "description": "Building the UK's leading beauty dupe brand",
+      "year": "2022-2025",
+      "image": "💄",
+      "color": "from-pink-400 to-pink-600",
+      "link": "/work/revolution-beauty",
+      "results": "Brand leadership",
+      "services": ["SEO", "Social", "Content"]
+    },
+    {
+      "id": 9,
+      "title": "Lloyds Pharmacy",
+      "category": "STI Tests",
+      "description": "Driving category leadership for STI tests",
+      "year": "2022-2023",
+      "image": "🏥",
+      "color": "from-indigo-400 to-indigo-600",
+      "link": "/work/lloyds-pharmacy",
+      "results": "Category leadership",
+      "services": ["SEO", "Content"]
+    },
+    {
+      "id": 10,
+      "title": "PrettyLittleThing",
+      "category": "Outfits",
+      "description": "Driving discovery for everything 'outfits' for PLT",
+      "year": "2021-2023",
+      "image": "👗",
+      "color": "from-rose-400 to-rose-600",
+      "link": "/work/prettylittlething",
+      "results": "Discovery increase",
+      "services": ["SEO", "Social", "Content"]
+    }
+  ]
+}

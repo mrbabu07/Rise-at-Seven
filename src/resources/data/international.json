@@ -1,0 +1,44 @@
+{
+  "regions": [
+    {
+      "id": 1,
+      "title": "US Digital PR",
+      "slug": "us-digital-pr",
+      "description": "Comprehensive digital PR services for the US market",
+      "icon": "🇺🇸",
+      "link": "/international/us-digital-pr",
+      "services": ["Digital PR", "Media Outreach", "Brand Building"],
+      "markets": ["New York", "Los Angeles", "Chicago"]
+    },
+    {
+      "id": 2,
+      "title": "Spain Digital PR",
+      "slug": "spain-digital-pr",
+      "description": "Specialized services for the Spanish market",
+      "icon": "🇪🇸",
+      "link": "/international/spain-digital-pr",
+      "services": ["Digital PR", "Content Strategy", "Social Media"],
+      "markets": ["Madrid", "Barcelona", "Valencia"]
+    },
+    {
+      "id": 3,
+      "title": "Germany Digital PR",
+      "slug": "germany-digital-pr",
+      "description": "Expert services for German market expansion",
+      "icon": "🇩🇪",
+      "link": "/international/germany-digital-pr",
+      "services": ["Digital PR", "SEO", "Content Marketing"],
+      "markets": ["Berlin", "Munich", "Hamburg"]
+    },
+    {
+      "id": 4,
+      "title": "Netherlands Digital PR",
+      "slug": "netherlands-digital-pr",
+      "description": "Tailored solutions for the Dutch market",
+      "icon": "🇳🇱",
+      "link": "/international/netherlands-digital-pr",
+      "services": ["Digital PR", "Social Media", "Brand Strategy"],
+      "markets": ["Amsterdam", "Rotterdam", "Utrecht"]
+    }
+  ]
+}
