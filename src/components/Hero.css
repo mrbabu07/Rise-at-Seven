@@ -670,6 +670,13 @@
     justify-self: end !important;
     color: #fff !important;
     transition: opacity 160ms ease, transform 160ms ease !important;
+    width: 36px !important;
+    min-height: 36px !important;
+    border: 0 !important;
+    background: transparent !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    place-items: center !important;
   }
 
   .hero--live .hamburger-icon {
