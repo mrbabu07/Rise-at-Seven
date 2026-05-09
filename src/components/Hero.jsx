@@ -15,13 +15,13 @@ export function Hero({ navigation, heroImages, awardBadges }) {
 
   return (
     <section className="hero hero--live">
-      <header className="hero--live header">
-        <div className="hero--live brand">
+      <header className="header">
+        <div className="brand">
           <span className="brand__text">Rise at Seven</span>
           <span className="brand__mark">®</span>
         </div>
         
-        <nav className="hero--live desktop-nav">
+        <nav className="desktop-nav">
           {navigation?.map((item) => (
             <a key={item.label} href={item.href}>
               {item.label}
@@ -30,10 +30,10 @@ export function Hero({ navigation, heroImages, awardBadges }) {
           ))}
         </nav>
         
-        <a href="/contact" className="hero--live header-cta">Get Started</a>
+        <a href="/contact" className="header-cta">Get Started</a>
         
         <button 
-          className="hero--live menu-button"
+          className="menu-button"
           onClick={() => setIsMobilePanelOpen(!isMobilePanelOpen)}
           aria-label="Toggle menu"
           aria-expanded={isMobilePanelOpen}
