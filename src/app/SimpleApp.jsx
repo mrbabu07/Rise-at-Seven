@@ -5,6 +5,9 @@ import ClientCarousel from '../components/ClientCarousel'
 import Manifesto from '../components/Manifesto'
 import FeaturedWork from '../components/FeaturedWork'
 import Services from '../components/Services'
+import ChasingConsumers from '../components/ChasingConsumers'
+import Legacy from '../components/Legacy'
+import News from '../components/News'
 
 export function SimpleApp() {
   return (
@@ -14,6 +17,9 @@ export function SimpleApp() {
       <Manifesto />
       <FeaturedWork />
       <Services />
+      <ChasingConsumers />
+      <Legacy />
+      <News />
     </Layout>
   )
 }
