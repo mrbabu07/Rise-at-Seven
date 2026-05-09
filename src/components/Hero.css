@@ -1,5 +1,16 @@
 /* Hero Section Styles - Exact Original from global.css */
 
+.hero--live {
+  position: relative !important;
+  min-height: calc(100svh - 50px) !important;
+  margin: 50px 8px 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: 26px 26px 0 0 !important;
+  background: #050505 !important;
+  isolation: isolate;
+}
+
 .hero-live__bg {
   position: absolute !important;
   inset: 0 !important;
