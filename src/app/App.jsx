@@ -229,16 +229,16 @@ export function App() {
     window.addEventListener('touchmove', handleWorkTouchMove, { passive: false })
 
     let scrollClassTimer
-    const handleHeaderScrollState = () => {
+    const syncHeaderPosition = () => {
+      clearTimeout(scrollClassTimer)
       document.body.classList.add('is-mobile-scrolling')
       document.body.classList.toggle('is-past-hero', window.scrollY > 120)
-      clearTimeout(scrollClassTimer)
       scrollClassTimer = window.setTimeout(() => {
         document.body.classList.remove('is-mobile-scrolling')
       }, 180)
     }
-    handleHeaderScrollState()
-    window.addEventListener('scroll', handleHeaderScrollState, { passive: true })
+    document.body.classList.toggle('is-past-hero', window.scrollY > 120)
+    window.addEventListener('scroll', syncHeaderPosition, { passive: true })
 
     return () => {
       clearInterval(heroTimer)
@@ -247,7 +247,7 @@ export function App() {
       window.removeEventListener('wheel', handleWorkWheel)
       window.removeEventListener('touchstart', handleWorkTouchStart)
       window.removeEventListener('touchmove', handleWorkTouchMove)
-      window.removeEventListener('scroll', handleHeaderScrollState)
+      window.removeEventListener('scroll', syncHeaderPosition)
       clearTimeout(scrollClassTimer)
       ScrollTrigger.getAll().forEach((t) => t.kill())
     }

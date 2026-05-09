@@ -1,5 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './Hero.css'
+
+const toHref = (item) => {
+  if (item.href) return item.href
+  if (item.label === 'Blog & Resources') return 'https://riseatseven.com/blog/'
+  if (item.label === 'Webinar') return 'https://riseatseven.com/webinars/'
+  const slug = item.label.toLowerCase().replaceAll('&', '').replaceAll(' ', '-')
+  return `https://riseatseven.com/${slug}/`
+}
+
+const toChildHref = (child) => {
+  const slug = child.toLowerCase().replaceAll('&', '').replaceAll('/', '').replaceAll(' ', '-')
+  return `https://riseatseven.com/${slug}/`
+}
+
+const searchPlatforms = ['Google', 'ChatGPT', 'Gemini', 'TikTok', 'YouTube', 'Pinterest', 'GIPHY', 'reddit', 'amazon']
 
 export function Hero({ navigation, heroImages, awardBadges }) {
   const [heroIndex, setHeroIndex] = useState(0)
@@ -13,87 +28,97 @@ export function Hero({ navigation, heroImages, awardBadges }) {
     return () => clearInterval(heroTimer)
   }, [heroImages.length])
 
+  useEffect(() => {
+    document.body.classList.toggle('is-menu-open', isMobilePanelOpen)
+    return () => document.body.classList.remove('is-menu-open')
+  }, [isMobilePanelOpen])
+
   return (
     <section className="hero hero--live">
       <header className="header">
-        <div className="brand">
+        <a className="brand" href="https://riseatseven.com/" aria-label="Rise at Seven home">
           <span className="brand__text">Rise at Seven</span>
-          <span className="brand__mark">®</span>
-        </div>
-        
-        <nav className="desktop-nav">
+          <span className="brand__mark" aria-hidden="true"></span>
+        </a>
+
+        <nav className="desktop-nav" aria-label="Primary navigation">
           {navigation?.map((item) => (
-            <a key={item.label} href={item.href}>
+            <a key={item.label} href={toHref(item)}>
               {item.label}
-              {item.badge && <em>{item.badge}</em>}
+              {item.label === 'Work' && <em>25</em>}
+              {item.items?.length ? <span aria-hidden="true"> +</span> : null}
             </a>
           ))}
         </nav>
-        
-        <a href="/contact" className="header-cta">Get Started</a>
-        
-        <button 
+
+        <a href="https://riseatseven.com/connect-with-us/" className="header-cta">Get In Touch</a>
+
+        <button
           className="menu-button"
-          onClick={() => setIsMobilePanelOpen(!isMobilePanelOpen)}
+          onClick={() => setIsMobilePanelOpen((open) => !open)}
           aria-label="Toggle menu"
           aria-expanded={isMobilePanelOpen}
+          type="button"
         >
-          <div className="hamburger-icon">
+          <div className="hamburger-icon" aria-hidden="true">
             <span></span>
             <span></span>
             <span></span>
           </div>
         </button>
 
-        {/* Mobile Panel - Only render when open */}
         {isMobilePanelOpen && (
-          <div className="mobile-panel">
+          <div className="mobile-panel" role="dialog" aria-label="Mobile navigation">
             <div className="mobile-panel__top">
-              <div className="mobile-panel__brand">
+              <a className="mobile-panel__brand" href="https://riseatseven.com/" onClick={() => setIsMobilePanelOpen(false)}>
                 Rise at Seven<sup>®</sup>
-              </div>
-              <button 
+              </a>
+              <button
                 className="mobile-panel__close"
                 onClick={() => setIsMobilePanelOpen(false)}
                 aria-label="Close menu"
+                type="button"
               >
-                ✕
+                ×
               </button>
             </div>
 
             {navigation?.map((item) => (
-              <details key={item.label}>
-                <summary>
-                  {item.label}
-                  <span className="mobile-chevron"></span>
-                </summary>
-                {item.submenu && item.submenu.map((sub) => (
-                  <a key={sub.label} href={sub.href} onClick={() => setIsMobilePanelOpen(false)}>
-                    {sub.label}
-                  </a>
-                ))}
-              </details>
+              item.items?.length ? (
+                <details key={item.label}>
+                  <summary>
+                    {item.label}
+                    <span className="mobile-chevron" aria-hidden="true"></span>
+                  </summary>
+                  {item.items.map((child) => (
+                    <a key={child} href={toChildHref(child)} onClick={() => setIsMobilePanelOpen(false)}>
+                      {child}
+                    </a>
+                  ))}
+                </details>
+              ) : (
+                <a key={item.label} href={toHref(item)} onClick={() => setIsMobilePanelOpen(false)}>
+                  {item.label}{item.label === 'Work' ? ' 25' : ''}
+                </a>
+              )
             ))}
 
-            <a href="/contact" className="mobile-panel__cta" onClick={() => setIsMobilePanelOpen(false)}>
-              Get Started
+            <a href="https://riseatseven.com/connect-with-us/" className="mobile-panel__cta" onClick={() => setIsMobilePanelOpen(false)}>
+              Get In Touch
             </a>
           </div>
         )}
       </header>
 
-      {/* Background image that slowly zooms */}
       <img key={heroIndex} className="hero-live__bg" src={heroImages[heroIndex]} alt="" aria-hidden="true" />
 
       <div className="hero-live__center">
-        {/* "#1" badge row */}
         <div className="award-line" data-reveal>
           <span className="award-line__dash" />
           <strong>#1 Most Recommended Content Marketing Agency</strong>
           <span className="award-line__dash" />
         </div>
 
-        {/* Award logos */}
         <div className="hero-awards" data-reveal>
           {awardBadges.map((badge) => (
             <div key={badge.name} className="hero-award-badge" title={badge.name}>
@@ -110,7 +135,6 @@ export function Hero({ navigation, heroImages, awardBadges }) {
           ))}
         </div>
 
-        {/* Main headline */}
         <h1 data-reveal>
           We Create
           <br />
@@ -123,9 +147,13 @@ export function Hero({ navigation, heroImages, awardBadges }) {
           Leaders
         </h1>
         <p data-reveal>on every searchable platform</p>
+        <div className="hero-platforms" aria-hidden="true" data-reveal>
+          {searchPlatforms.map((platform) => (
+            <span key={platform}>{platform}</span>
+          ))}
+        </div>
       </div>
 
-      {/* Bottom two-col info */}
       <div className="hero-live__bottom" data-reveal>
         <p>
           Organic media planners creating, distributing &amp; optimising
