@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { Header } from './index.jsx'
 import './Hero.css'
 
 export function Hero({ navigation, heroImages, awardBadges }) {
@@ -82,8 +81,6 @@ export function Hero({ navigation, heroImages, awardBadges }) {
           </div>
         )}
       </header>
-
-      <Header navigation={navigation} />
 
       {/* Background image that slowly zooms */}
       <img key={heroIndex} className="hero-live__bg" src={heroImages[heroIndex]} alt="" aria-hidden="true" />
