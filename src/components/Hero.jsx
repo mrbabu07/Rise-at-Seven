@@ -37,6 +37,7 @@ export function Hero({ navigation, heroImages, awardBadges }) {
           className="hero--live menu-button"
           onClick={() => setIsMobilePanelOpen(!isMobilePanelOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isMobilePanelOpen}
         >
           <div className="hamburger-icon">
             <span></span>
@@ -45,7 +46,7 @@ export function Hero({ navigation, heroImages, awardBadges }) {
           </div>
         </button>
 
-        {/* Mobile Panel */}
+        {/* Mobile Panel - Only render when open */}
         {isMobilePanelOpen && (
           <div className="mobile-panel">
             <div className="mobile-panel__top">

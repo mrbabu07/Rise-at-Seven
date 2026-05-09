@@ -292,6 +292,21 @@
   border: 0 !important;
 }
 
+/* Desktop: Hide hamburger menu */
+@media (min-width: 981px) {
+  .hero--live .menu-button {
+    display: none !important;
+  }
+
+  .hamburger-icon {
+    display: none !important;
+  }
+
+  .mobile-panel {
+    display: none !important;
+  }
+}
+
 .hero-live__center {
   position: absolute !important;
   top: 55% !important;
@@ -438,6 +453,10 @@
 
   .hero--live .menu-button {
     display: inline-grid !important;
+  }
+
+  .hamburger-icon {
+    display: flex !important;
   }
 
   .hero-live__center {
