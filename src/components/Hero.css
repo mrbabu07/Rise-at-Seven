@@ -687,6 +687,8 @@
     display: flex !important;
     width: 20px !important;
     height: 14px !important;
+    z-index: 1001 !important;
+    position: relative !important;
   }
 
   .hero--live .hamburger-icon span {
