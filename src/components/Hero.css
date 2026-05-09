@@ -127,6 +127,36 @@
   font-size: 0.85em;
 }
 
+.hero--live .menu-button {
+  justify-self: end !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 48px !important;
+  min-height: 48px !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+}
+
+.hamburger-icon {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  width: 24px !important;
+  height: 18px !important;
+}
+
+.hamburger-icon span {
+  display: block !important;
+  width: 100% !important;
+  height: 2px !important;
+  background: #fff !important;
+  border-radius: 1px !important;
+  transition: all 0.3s ease !important;
+}
+
 .hero-live__center {
   position: absolute !important;
   top: 55% !important;
@@ -264,6 +294,15 @@
 
   .hero--live .header {
     grid-template-columns: auto 1fr auto;
+  }
+
+  .hero--live .desktop-nav,
+  .hero--live .header-cta {
+    display: none !important;
+  }
+
+  .hero--live .menu-button {
+    display: inline-grid !important;
   }
 
   .hero-live__center {

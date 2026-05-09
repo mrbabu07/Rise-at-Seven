@@ -4,6 +4,7 @@ import './Hero.css'
 
 export function Hero({ navigation, heroImages, awardBadges }) {
   const [heroIndex, setHeroIndex] = useState(0)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const heroTimer = window.setInterval(() => {
@@ -15,6 +16,36 @@ export function Hero({ navigation, heroImages, awardBadges }) {
 
   return (
     <section className="hero hero--live">
+      <header className="hero--live header">
+        <div className="hero--live brand">
+          <span className="brand__text">Rise at Seven</span>
+          <span className="brand__mark">®</span>
+        </div>
+        
+        <nav className="hero--live desktop-nav">
+          {navigation?.map((item) => (
+            <a key={item.label} href={item.href}>
+              {item.label}
+              {item.badge && <em>{item.badge}</em>}
+            </a>
+          ))}
+        </nav>
+        
+        <a href="/contact" className="hero--live header-cta">Get Started</a>
+        
+        <button 
+          className="hero--live menu-button"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <div className="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </header>
+
       <Header navigation={navigation} />
 
       {/* Background image that slowly zooms */}
