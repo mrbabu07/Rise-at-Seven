@@ -9433,3 +9433,66 @@ input {
     padding-top: 32px !important;
   }
 }
+
+/* Footer link and CTA motion to match the live site. */
+.footer__nav-col a {
+  overflow: hidden !important;
+  transition: color 260ms ease !important;
+}
+
+.footer__link-text-stack {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  height: 1em !important;
+  line-height: 1 !important;
+  overflow: hidden !important;
+}
+
+.footer__link-text-stack span {
+  display: block !important;
+  line-height: 1 !important;
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.footer__nav-col a:hover {
+  color: #adf7e5 !important;
+}
+
+.footer__nav-col a:hover .footer__link-text-stack span {
+  transform: translateY(-100%) !important;
+}
+
+.footer__email-row {
+  transition: background 260ms ease, box-shadow 260ms ease !important;
+}
+
+.footer__email-btn {
+  transition:
+    background 260ms ease,
+    color 260ms ease,
+    border-radius 360ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 360ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.footer__email-btn svg {
+  transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.footer__email-row:hover,
+.footer__email-row:focus-within {
+  background: #303030 !important;
+}
+
+.footer__email-row:hover .footer__email-btn,
+.footer__email-row:focus-within .footer__email-btn,
+.footer__email-btn:hover {
+  border-radius: 18px !important;
+  background: #ffffff !important;
+  color: #050505 !important;
+}
+
+.footer__email-row:hover .footer__email-btn svg,
+.footer__email-row:focus-within .footer__email-btn svg,
+.footer__email-btn:hover svg {
+  transform: rotate(45deg) !important;
+}

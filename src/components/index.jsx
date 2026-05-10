@@ -241,6 +241,12 @@ export function Footer() {
     { icon: 'fa-instagram', label: 'Instagram', url: 'https://www.instagram.com/riseatseven' },
     { icon: 'fa-tiktok', label: 'TikTok', url: 'https://www.tiktok.com/@riseatseven' },
   ]
+  const animatedFooterText = (label) => (
+    <span className="footer__link-text-stack">
+      <span>{label}</span>
+      <span aria-hidden="true">{label}</span>
+    </span>
+  )
 
   return (
     <>
@@ -318,18 +324,18 @@ export function Footer() {
           <div className="footer__nav-cols">
             <div className="footer__nav-col">
               {['Services', 'Work', 'About', 'Culture', 'Meet The Risers'].map(label => (
-                <a key={label} href={navLinks.find(l => l.label === label)?.url || '#'}>{label}</a>
+                <a key={label} href={navLinks.find(l => l.label === label)?.url || '#'}>{animatedFooterText(label)}</a>
               ))}
             </div>
             <div className="footer__nav-col">
               {['Testimonials', 'Blog & Resources', 'Webinars', 'Careers'].map(label => (
-                <a key={label} href={navLinks.find(l => l.label === label)?.url || '#'}>{label}</a>
+                <a key={label} href={navLinks.find(l => l.label === label)?.url || '#'}>{animatedFooterText(label)}</a>
               ))}
             </div>
             <div className="footer__nav-col">
               {offices.map((o) => (
                 <a key={o.name} href={o.url} target={o.name !== 'Contact' ? '_blank' : undefined} rel="noopener noreferrer">
-                  {o.name}
+                  {animatedFooterText(o.name)}
                 </a>
               ))}
             </div>
