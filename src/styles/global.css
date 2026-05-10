@@ -483,7 +483,7 @@
   .services-live__head h2 {
     margin: 0 !important;
     color: #050505 !important;
-    font-size: clamp(86px, 6.2vw, 119px) !important;
+    font-size: clamp(76px, 6vw, 119px) !important;
     font-weight: 600 !important;
     line-height: 0.9 !important;
     letter-spacing: -0.095em !important;
@@ -498,14 +498,14 @@
   }
 
   .services-live__head .arrow-button {
-    min-width: 270px !important;
-    min-height: 68px !important;
-    padding: 0 38px !important;
+    min-width: 200px !important;
+    min-height: 40px !important;
+    padding: 18px !important;
     border-radius: 999px !important;
     background: #fff !important;
     color: #050505 !important;
-    font-size: 24px !important;
-    font-weight: 650 !important;
+    font-size: 20px !important;
+    font-weight: 450 !important;
     letter-spacing: -0.065em !important;
   }
 
@@ -1330,8 +1330,8 @@ body,
   padding: 0 !important;
   border: 0 !important;
   color: #050505 !important;
-  font-size: clamp(30px, 3vw, 54px) !important;
-  font-weight: 560 !important;
+  font-size: clamp(30px, 2vw, 54px) !important;
+  font-weight: 300 !important;
   line-height: 0.9 !important;
   letter-spacing: -0.085em !important;
 }
@@ -1662,8 +1662,8 @@ body,
   }
 
   .manifesto p {
-    margin-top: 26px !important;
-    font-size: clamp(30px, 10vw, 52px) !important;
+    /* margin-top: 26px !important; */
+    font-size: clamp(24px, 5vw, 52px) !important;
   }
 
   .manifesto__buttons {
@@ -4735,7 +4735,7 @@ input {
   }
 
   .work-explore {
-    padding: 0 16px 56px;
+    padding: 0 16px 2px;
   }
 
   /* Services */
@@ -6015,6 +6015,8 @@ input {
   background: var(--white);
   font-weight: 500;
   letter-spacing: -0.04em;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .work-explore .arrow-button i {
@@ -7732,7 +7734,7 @@ input {
   }
 
   .chasing {
-    padding: 24px 0 38px;
+    padding: 14px 0 38px;
   }
 
   .chasing__word {
@@ -8158,8 +8160,9 @@ input {
     order: 3;
     min-height: 35px;
     width: 100%;
-    margin-top: 14px;
+    margin-top: 18px;
     font-size: 13px;
+    justify-content: center;
   }
 }
 
@@ -8342,7 +8345,7 @@ input {
   }
 
   .footer {
-    margin: 68px 4px 0 !important;
+    margin: 8px 4px 0 !important;
     padding: 40px 12px 0 !important;
     border-radius: 18px 18px 0 0 !important;
     overflow: hidden !important;
@@ -9060,14 +9063,15 @@ input {
   }
 
   .client-row {
-    min-height: 430px !important;
+    min-height: 89px !important;
     padding: 38px 13px 30px !important;
   }
 
   .client-row__label {
     max-width: 260px !important;
-    font-size: clamp(50px, 15vw, 60px) !important;
+    font-size: clamp(20px, 5vw, 60px) !important;
     line-height: 0.78 !important;
+    font-weight: 600 !important;
     letter-spacing: -0.09em !important;
   }
 
@@ -9082,7 +9086,7 @@ input {
   }
 
   .work-live__list p {
-    font-size: clamp(42px, 12vw, 54px) !important;
+    font-size: clamp(20px, 2vw, 54px) !important;
     line-height: 0.86 !important;
   }
 
@@ -9174,7 +9178,7 @@ input {
   }
 
   .services-live__grid {
-    padding-top: 68px !important;
+    padding-top: 2px !important;
   }
 
   .service-link {
@@ -9194,7 +9198,7 @@ input {
     align-items: start !important;
     height: 482px !important;
     min-height: 482px !important;
-    padding: 118px 14px 0 !important;
+    padding: 51px 14px 0 !important;
     margin: 0 !important;
     background: #f1f0ee !important;
     color: #080808 !important;
@@ -9207,10 +9211,10 @@ input {
     max-width: 690px !important;
     margin: 0 !important;
     color: #050505 !important;
-    font-size: clamp(30px, 1.74vw, 34px) !important;
-    font-weight: 600 !important;
+    font-size: clamp(20px, 4vw, 28px) !important;
+    font-weight: 400 !important;
     line-height: 0.99 !important;
-    letter-spacing: -0.085em !important;
+    
   }
 
   .manifesto h2 {
@@ -9219,7 +9223,7 @@ input {
     max-width: 900px !important;
     margin: -4px 0 0 !important;
     color: #080808 !important;
-    font-size: clamp(86px, 5.95vw, 112px) !important;
+    font-size: clamp(60px, -5.95vw, 112px) !important;
     font-weight: 600 !important;
     line-height: 0.91 !important;
     letter-spacing: -0.09em !important;
@@ -9324,7 +9328,7 @@ input {
 
   .services-live .service-link {
     position: relative !important;
-    min-height: 145px !important;
+    min-height: 100px !important;
     padding: 0 72px !important;
     border: 0 !important;
     border-bottom: 1px solid rgba(5, 5, 5, 0.16) !important;
@@ -9382,7 +9386,7 @@ input {
 
   .services-live .service-link__text {
     color: currentColor !important;
-    font-size: clamp(58px, 4.55vw, 82px) !important;
+    font-size: clamp(24px, 2vw, 82px) !important;
     font-weight: 600 !important;
     line-height: 0.92 !important;
     letter-spacing: -0.09em !important;
