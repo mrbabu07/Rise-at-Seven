@@ -126,7 +126,7 @@ export function App() {
         scrollTrigger: {
           trigger: legacyLiveRef.current,
           start: 'center center', // Animation starts when the section center reaches viewport center
-          end: '+=350%', // Increased scroll distance to make animation play much slower
+          end: '+=1',
           pin: true,
           scrub: 1,
         }

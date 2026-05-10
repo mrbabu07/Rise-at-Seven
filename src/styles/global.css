@@ -9425,3 +9425,11 @@ input {
     opacity: 1 !important;
   }
 }
+
+/* Tighten only the desktop gap above the news heading. */
+@media (min-width: 981px) {
+  .news.section-pad,
+  .news {
+    padding-top: 32px !important;
+  }
+}

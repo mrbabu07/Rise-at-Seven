@@ -267,12 +267,12 @@
   .work-live {
     display: block;
     margin: 0 12px 40px;
-    padding: 23px 15px 0;
+    padding: 23px 15px 15px;
     border-radius: 17px;
     background: #0d0f0e;
-    height: min(560px, calc(100svh - 92px));
-    max-height: 560px;
-    overflow: hidden;
+    height: auto;
+    max-height: none;
+    overflow: visible;
     scroll-margin-top: 52px;
   }
 
@@ -300,15 +300,15 @@
     display: flex !important;
     flex-direction: column !important;
     gap: 15px;
-    height: calc(100% - 35px) !important;
+    height: auto !important;
     min-height: 0 !important;
     max-height: none !important;
-    overflow-y: auto !important;
+    overflow-y: visible !important;
     overflow-x: hidden !important;
     padding-right: 0 !important;
-    padding-bottom: 22px;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0;
+    overscroll-behavior: auto;
+    -webkit-overflow-scrolling: auto;
     scrollbar-width: none;
   }
 
@@ -367,9 +367,24 @@
   }
 
   .work-card__overlay,
-  .work-card__hover-circle,
-  .work-card__pill {
+  .work-card__hover-circle {
     display: none !important;
+  }
+
+  .work-card__pill {
+    top: 12px;
+    right: 12px;
+    bottom: auto;
+    z-index: 4;
+    display: inline-flex !important;
+    gap: 8px;
+    padding: 8px 13px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.28);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
   }
 
   .work-explore {

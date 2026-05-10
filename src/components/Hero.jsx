@@ -14,6 +14,10 @@ const toChildHref = (child) => {
   return `https://riseatseven.com/${slug}/`
 }
 
+const mobileOnlyChildren = {
+  'Blog & Resources': ['Blog', 'Category Leaderboard', 'Multi-Channel Search Report'],
+}
+
 export function Hero({ navigation, heroImages, awardBadges }) {
   const [heroIndex, setHeroIndex] = useState(0)
   const [isMobilePanelOpen, setIsMobilePanelOpen] = useState(false)
@@ -81,14 +85,16 @@ export function Hero({ navigation, heroImages, awardBadges }) {
               </button>
             </div>
 
-            {navigation?.map((item) => (
-              item.items?.length ? (
+            {navigation?.map((item) => {
+              const mobileChildren = item.items?.length ? item.items : mobileOnlyChildren[item.label]
+
+              return mobileChildren?.length ? (
                 <details key={item.label}>
                   <summary>
                     {item.label}
                     <span className="mobile-chevron" aria-hidden="true"></span>
                   </summary>
-                  {item.items.map((child) => (
+                  {mobileChildren.map((child) => (
                     <a key={child} href={toChildHref(child)} onClick={() => setIsMobilePanelOpen(false)}>
                       {child}
                     </a>
@@ -96,13 +102,13 @@ export function Hero({ navigation, heroImages, awardBadges }) {
                 </details>
               ) : (
                 <a key={item.label} href={toHref(item)} onClick={() => setIsMobilePanelOpen(false)}>
-                  {item.label}{item.label === 'Work' ? ' 25' : ''}
+                  {item.label}
                 </a>
               )
-            ))}
+            })}
 
             <a href="https://riseatseven.com/connect-with-us/" className="mobile-panel__cta" onClick={() => setIsMobilePanelOpen(false)}>
-              Get In Touch
+              Get In Touch <span aria-hidden="true">↗</span>
             </a>
           </div>
         )}
