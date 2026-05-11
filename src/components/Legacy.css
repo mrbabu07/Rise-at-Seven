@@ -1,7 +1,7 @@
 .legacy-live {
   position: relative;
-  min-height: 120vh;
-  padding: clamp(92px, 1vw, 130px) 24px clamp(110px, 12vw, 170px);
+  min-height: 100vh;
+  padding: 46px 24px clamp(110px, 12vw, 170px);
   overflow: hidden;
   background: #efeeec;
   text-align: center;
@@ -9,12 +9,12 @@
 
 .legacy-live > h2 {
   width: max-content;
-  max-width: 9vw;
-  margin: 0 auto clamp(51px, 4vw, 110px);
+  max-width: none;
+  margin: 0 auto clamp(56px, calc(56.7vh - 454px), 226px);
   color: var(--black, #050505);
-  font-size: clamp(20px, 1vw, 230px);
+  font-size: 24px;
   font-weight: 500;
-  line-height: 0.86;
+  line-height: 1;
   letter-spacing: 0;
   white-space: nowrap;
 }
@@ -35,32 +35,35 @@
 
 .legacy-stack {
   position: relative;
-  width: min(570px, 76vw);
-  height: 790px;
+  width: min(640px, 44.5vw);
+  height: min(640px, 44.5vw);
   margin: 0 auto;
   isolation: isolate;
+  overflow: visible;
 }
 
 .legacy-card-item {
   position: absolute;
   inset: 0 auto auto 0;
   width: 100%;
-  min-height: 650px;
+  min-height: 0;
+  aspect-ratio: 1;
   display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   gap: 18px;
-  padding: 72px 12px 10px;
+  padding: 70px 56px 56px;
   border-radius: 24px;
-  box-shadow: 0 28px 70px rgba(5, 5, 5, 0.12);
-  transform-origin: 50% 100%;
+  box-shadow: none !important;
+  transform-origin: 50% 50%;
   will-change: transform, opacity;
   backface-visibility: hidden;
+  overflow: hidden;
 }
 
 .legacy-stack img {
-  width: 150px;
+  width: 170px;
   aspect-ratio: 1;
   border-radius: 16px;
   object-fit: cover;
@@ -69,7 +72,7 @@
 
 .legacy-stack h3 {
   margin: 0;
-  font-size: clamp(52px, 5.2vw, 68px);
+  font-size: clamp(58px, 5.2vw, 76px);
   font-weight: 500;
   line-height: 0.92;
   letter-spacing: 0;
@@ -80,7 +83,7 @@
   margin: 0;
   text-align: center;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.12;
   letter-spacing: 0;
 }
@@ -92,12 +95,11 @@
   }
 
   .legacy-stack {
-    width: min(88vw, 520px);
-    height: 720px;
+    width: min(70vw, 560px);
+    height: min(70vw, 560px);
   }
 
   .legacy-card-item {
-    min-height: 650px;
     padding: 60px 42px 68px;
   }
 }
@@ -137,7 +139,7 @@
     min-height: auto;
     display: flex !important;
     gap: 12px;
-    padding: 20px 20px 22px !important;
+    padding: 24px 20px 28px !important;
     border-radius: 9px !important;
     box-shadow: none;
     transform: none !important;
@@ -152,7 +154,7 @@
   .legacy-stack img {
     width: 100% !important;
     max-width: none;
-    aspect-ratio: 1.12 / 1 !important;
+    aspect-ratio: 1 / 0.86 !important;
     border-radius: 7px !important;
     object-fit: cover;
   }

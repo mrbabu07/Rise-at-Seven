@@ -1,4 +1,4 @@
-import { SectionTitle, ArrowButton } from './index.jsx'
+import { ArrowButton } from './index.jsx'
 import './News.css'
 
 const titleImage =
@@ -8,12 +8,15 @@ export function News({ news }) {
   return (
     <section className="news section-pad" id="blog">
       <div className="section-head" data-reveal>
-        <SectionTitle kicker="What's">
-          <span className="news-title">
-            <img src={titleImage} alt="" className="news-title__image" loading="lazy" />
-            New
-          </span>
-        </SectionTitle>
+        <div className="title-block">
+          <h2>
+            <span className="news-title">
+              What's
+              <img src={titleImage} alt="" className="news-title__image" loading="lazy" />
+              New
+            </span>
+          </h2>
+        </div>
         <ArrowButton href="https://riseatseven.com/blog/">Explore More Thoughts</ArrowButton>
       </div>
       <div className="news-grid">

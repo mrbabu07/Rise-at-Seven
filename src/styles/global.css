@@ -8700,6 +8700,65 @@ input {
   }
 }
 
+/* Live-style Ready to Rise horizontal marquee */
+.ready-to-rise {
+  position: relative !important;
+  display: block !important;
+  height: 100vh !important;
+  min-height: 720px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: #efeeec !important;
+}
+
+.ready-to-rise__pin {
+  width: 100% !important;
+  height: 100vh !important;
+  min-height: 720px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  overflow: visible !important;
+  padding-top: clamp(300px, 26.5vh, 330px) !important;
+  box-sizing: border-box !important;
+}
+
+.ready-to-rise__track {
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  color: #050505 !important;
+  font-family: "saans", ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(180px, 16vw, 260px) !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.075em !important;
+  white-space: nowrap !important;
+  will-change: transform !important;
+}
+
+.ready-to-rise__wave-container,
+.ready-to-rise__wave-svg {
+  display: none !important;
+}
+
+.ready-to-rise::before,
+.ready-to-rise::after {
+  display: none !important;
+}
+
+@media (max-width: 1023px) {
+  .ready-to-rise {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}
+
+@media (min-width: 981px) {
+  .work-live {
+    margin-bottom: 0 !important;
+  }
+}
+
 /* Final mobile homepage fidelity pass */
 @media (max-width: 700px) {
   html,
@@ -9149,15 +9208,15 @@ input {
   }
 
   .services-live {
-    height: 585px !important;
-    min-height: 585px !important;
-    padding: 36px 29px 48px !important;
+    height: 555px !important;
+    min-height: 555px !important;
+    padding: 26px 29px 34px !important;
     box-sizing: border-box !important;
   }
 
   .chasing {
-    height: 330px !important;
-    min-height: 330px !important;
+    height: 298px !important;
+    min-height: 298px !important;
   }
 
   .arrow-button__text-wrap .arrow-button__text[aria-hidden="true"] {
@@ -9169,13 +9228,8 @@ input {
     transform: none !important;
   }
 
-  .services-live {
-    height: 760px !important;
-    min-height: 760px !important;
-  }
-
   .services-live__head {
-    padding-bottom: 60px !important;
+    padding-bottom: 38px !important;
   }
 
   .services-live__grid {
@@ -9431,7 +9485,8 @@ input {
 @media (min-width: 981px) {
   .news.section-pad,
   .news {
-    padding-top: 32px !important;
+    padding-top: 20px !important;
+    padding-bottom: 28px !important;
   }
 }
 
@@ -9811,4 +9866,168 @@ body.is-nav-hidden:not(.is-menu-open) .hero--live .header {
 body:not(.is-nav-hidden) .hero--live .header {
   opacity: 1 !important;
   pointer-events: auto !important;
+}
+
+/* Final desktop spacing match for News, Ready, and Footer. */
+@media (min-width: 981px) {
+  .news.section-pad,
+  .news {
+    position: relative !important;
+    z-index: 4 !important;
+    margin-top: -430px !important;
+    padding-top: 0 !important;
+    padding-bottom: 24px !important;
+  }
+
+  .news .section-head {
+    align-items: center !important;
+    padding: 0 28px 32px !important;
+    border-bottom: 1px solid rgba(5, 5, 5, 0.18) !important;
+  }
+
+  .news .title-block h2 {
+    margin: 0 !important;
+    font-size: clamp(104px, 7.6vw, 116px) !important;
+    font-weight: 500 !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.075em !important;
+  }
+
+  .news-title {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 16px !important;
+  }
+
+  .news-title__image {
+    width: 44px !important;
+    height: 88px !important;
+    border-radius: 999px !important;
+    object-fit: cover !important;
+  }
+
+  .news-grid {
+    margin-top: 36px !important;
+    padding: 0 28px !important;
+  }
+
+  .ready-to-rise {
+    height: 68vh !important;
+    min-height: 520px !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    z-index: 1 !important;
+  }
+
+  .ready-to-rise__pin {
+    height: 68vh !important;
+    min-height: 520px !important;
+    padding-top: clamp(170px, 22vh, 220px) !important;
+  }
+
+  .ready-to-rise__track {
+    font-size: clamp(180px, 16vw, 230px) !important;
+    font-weight: 500 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.035em !important;
+  }
+
+  .footer {
+    min-height: auto !important;
+    padding: 40px 28px 12px !important;
+  }
+
+  .footer__top {
+    padding-bottom: 96px !important;
+  }
+
+  .footer__wordmark-text {
+    font-size: clamp(128px, 13.6vw, 236px) !important;
+  }
+}
+
+@media (min-width: 981px) and (max-height: 950px) {
+  .legacy-live {
+    min-height: 720px !important;
+    padding-top: 46px !important;
+    padding-bottom: 72px !important;
+    z-index: 3 !important;
+  }
+
+  .legacy-live > h2 {
+    position: absolute !important;
+    top: 46px !important;
+    left: 0 !important;
+    z-index: 20 !important;
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    font-size: 22px !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.035em !important;
+    transform: none !important;
+  }
+
+  .legacy-stack {
+    width: min(620px, 43vw) !important;
+    height: min(620px, 43vw) !important;
+    margin-top: 54px !important;
+  }
+
+  .legacy-card-item {
+    padding-top: 62px !important;
+  }
+
+  .legacy-stack img {
+    width: 158px !important;
+  }
+
+  .legacy-stack h3 {
+    font-size: clamp(56px, 4.9vw, 72px) !important;
+  }
+
+  .legacy-stack p {
+    max-width: 410px !important;
+    font-size: 17px !important;
+  }
+}
+
+/* Keep the desktop footer CTA above the pinned Legacy animation. */
+@media (min-width: 981px) {
+  .legacy-live > h2 {
+    z-index: 0 !important;
+  }
+
+  .legacy-stack {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .ready-to-rise {
+    position: relative !important;
+    z-index: 8 !important;
+    display: block !important;
+    background: #efeeec !important;
+    color: #050505 !important;
+  }
+
+  .ready-to-rise__pin {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  .ready-to-rise__track {
+    display: block !important;
+    width: max-content !important;
+    min-width: 100vw !important;
+    margin: 0 !important;
+    color: #050505 !important;
+    white-space: nowrap !important;
+  }
+
+  .footer {
+    position: relative !important;
+    z-index: 9 !important;
+  }
 }

@@ -120,86 +120,100 @@ export function App() {
       gsap.to('.chasing__word--algorithms', { x: '6vw', ease: 'none', scrollTrigger: opts })
     }
 
-    // Legacy Stack Peeling Animation
+    // Legacy stack reveal: layered cards move upward through a pinned viewport.
     if (legacyLiveRef.current && legacyCardsRefs.current.length > 0 && window.matchMedia('(min-width: 701px)').matches) {
       const cards = legacyCardsRefs.current.filter(Boolean)
+
       gsap.set(cards, {
         clearProps: 'opacity,visibility',
-        transformOrigin: '50% 100%',
+        transformOrigin: '50% 50%',
       })
-      gsap.set(cards[0], { y: 0, rotation: 3, scale: 1 })
-      gsap.set(cards[1], { y: 14, rotation: -6, scale: 0.99 })
-      gsap.set(cards[2], { y: 28, rotation: -10, scale: 0.98 })
+      gsap.set(cards[0], { x: 0, y: 18, rotation: 4.2, scale: 0.94, zIndex: 3 })
+      gsap.set(cards[1], { x: -20, y: 30, rotation: 5.4, scale: 0.98, zIndex: 2 })
+      gsap.set(cards[2], { x: 24, y: 42, rotation: 6.2, scale: 1.02, zIndex: 1 })
 
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: legacyLiveRef.current,
           start: 'center center',
-          end: '+=220%',
+          end: '+=200%',
           pin: true,
           pinSpacing: true,
-          scrub: 1.1,
+          scrub: 1.55,
           anticipatePin: 1,
           invalidateOnRefresh: true,
         }
       })
       
       tl.to(cards[0], {
-        yPercent: -150,
-        xPercent: -28,
-        rotation: -18,
-        scale: 0.96,
+        yPercent: -142,
+        scale: 1.04,
+        rotation: 4.2,
         ease: 'none',
-        duration: 1,
+        duration: 1.15,
       })
       tl.to(cards[1], {
-        y: 0,
-        rotation: 2,
-        scale: 1,
+        x: 0,
+        y: 18,
+        scale: 0.94,
+        rotation: 4.2,
         ease: 'none',
-        duration: 1,
+        duration: 1.15,
       }, '<')
       tl.to(cards[2], {
-        y: 14,
-        rotation: -6,
-        scale: 0.99,
+        x: -20,
+        y: 30,
+        scale: 0.98,
+        rotation: 5.4,
         ease: 'none',
-        duration: 1,
+        duration: 1.15,
       }, '<')
       tl.to(cards[1], {
-        yPercent: -150,
-        xPercent: 26,
-        rotation: 18,
-        scale: 0.96,
+        yPercent: -142,
+        scale: 1.04,
+        rotation: 4.2,
         ease: 'none',
-        duration: 1,
-      }, '+=0.18')
+        duration: 1.15,
+      }, '+=0.08')
       tl.to(cards[2], {
-        y: 0,
-        rotation: 3,
-        scale: 1,
+        x: 0,
+        y: 18,
+        scale: 0.94,
+        rotation: 4.2,
         ease: 'none',
-        duration: 1,
+        duration: 1.15,
       }, '<')
-      tl.to({}, { duration: 0.45 })
+      tl.to(cards[2], {
+        yPercent: -142,
+        scale: 1.04,
+        rotation: 4.2,
+        ease: 'none',
+        duration: 1.15,
+      }, '+=0.08')
+      tl.to({}, { duration: 0.08 })
     }
 
     // Ready to Rise Wave Marquee — scrolling down moves text LEFT, up moves it RIGHT
     if (document.querySelector('.ready-to-rise')) {
-      gsap.fromTo(
-        '.ready-to-rise__text-path',
-        { attr: { startOffset: '38%' } },   // text starts pushed right (scroll-top state)
-        {
-          attr: { startOffset: '8%' },       // text ends pushed left (scroll-bottom state)
-          ease: 'none',
-          scrollTrigger: {
-            trigger: '.ready-to-rise',
-            start: 'top bottom',   // animation starts when section enters viewport bottom
-            end: 'bottom top',     // ends when section exits viewport top
-            scrub: 1.5,            // smooth lag following scroll
-          },
-        }
-      );
+      const readyTrack = document.querySelector('.ready-to-rise__track')
+
+      if (readyTrack && window.matchMedia('(min-width: 1024px)').matches) {
+        gsap.fromTo(
+          readyTrack,
+          { xPercent: 0 },
+          {
+            xPercent: -30,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: '.ready-to-rise',
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: 1.2,
+              invalidateOnRefresh: true,
+            },
+          }
+        )
+      }
     }
 
     // Hover lift on interactive elements

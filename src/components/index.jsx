@@ -256,6 +256,11 @@ export function Footer() {
   return (
     <>
       <section className="ready-to-rise">
+        <div className="ready-to-rise__pin">
+          <p className="ready-to-rise__track" aria-label="Ready to Rise at Seven?">
+            Ready to Rise at Seven?
+          </p>
+        </div>
         <div className="ready-to-rise__wave-container">
           <svg
             viewBox="0 0 1440 500"

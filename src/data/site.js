@@ -190,7 +190,7 @@ export const legacyCards = [
     title: 'Award Winning',
     body: "A roll top bath full of 79 awards. Voted The Drum's best agency outside of London. We are official judges for industry awards including Global Search Awards and Global Content Marketing Awards.",
     sub: null,
-    bg: '#d7ff42',
+    bg: '#aef4df',
     color: '#050505',
   },
   {
