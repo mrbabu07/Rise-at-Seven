@@ -27,6 +27,21 @@
   text-transform: none;
 }
 
+.news-title {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(12px, 1.8vw, 24px);
+}
+
+.news-title__image {
+  display: inline-block;
+  width: clamp(76px, 9vw, 138px);
+  aspect-ratio: 1;
+  border-radius: 16px;
+  object-fit: cover;
+  flex: 0 0 auto;
+}
+
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -197,6 +212,11 @@
 
   .title-block h2 {
     font-size: clamp(36px, 9vw, 68px);
+  }
+
+  .news-title__image {
+    width: clamp(54px, 18vw, 76px);
+    border-radius: 10px;
   }
 
   .news-grid {

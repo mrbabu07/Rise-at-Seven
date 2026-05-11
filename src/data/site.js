@@ -163,7 +163,7 @@ export const featuredWork = [
     result: 'Driving category leadership for STI tests',
     cardBg: '#006837',
     image:
-      'https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-10-at-12.13.46.png?w=2000&h=1500&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750847624&s=1297f5bff1af8057f9908e26952ac',
+      'https://rise-atseven.transforms.svdcdn.com/production/images/Screenshot-2025-06-10-at-12.13.46.png?w=2000&h=1500&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750847624&s=1297f5bff1af8057f9908e26956825ac',
   },
 ]
 
@@ -228,7 +228,7 @@ export const news = [
     authorImage: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80',
     title: "Ryan McNamara Is Now Rise at Seven's Global Operations Director",
     url: 'https://riseatseven.com/blog/ryan-mcnamara-is-now-rise-at-sevens-global-operations-director/',
-    image: 'https://rise-atseven.transforms.svdcdn.com/production/images/maxresdefault_2025-10-22-141838_nmnu.jpg?w=800&h=800&q=80&fm=webp&fit=crop&dm=1761142718&s=19d31221b717bb829b65ed531322d432',
+    image: 'https://rise-atseven.transforms.svdcdn.com/production/images/0B5A7827.jpg?w=2000&h=2000&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1777514348&s=161c413ad12ef90895fad390f5521371',
     hoverText: 'Read News',
   },
 ]

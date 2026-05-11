@@ -232,7 +232,7 @@
     height: 40px;
     margin: 0 0 0 6px;
     border-radius: 7px;
-    background-image: url("https://rise-atseven.transforms.svdcdn.com/production/images/FOS25-3380.jpg?w=200&h=200&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750846499&s=8c1a07d60970e114e350dc38945f6bad");
+    /* background-image: url("https://rise-atseven.transforms.svdcdn.com/production/images/FOS25-3380.jpg?w=200&h=200&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750846499&s=8c1a07d60970e114e350dc38945f6bad"); */
     background-position: center;
     background-size: cover;
     transform: translateY(2px);
@@ -3282,6 +3282,7 @@ input {
   text-transform: none;
   letter-spacing: -0.03em;
   opacity: 0.7;
+  
 }
 
 .title-block h2 {
@@ -8053,7 +8054,7 @@ input {
     height: 40px;
     margin: 0 0 0 6px;
     border-radius: 7px;
-    background-image: url("https://rise-atseven.transforms.svdcdn.com/production/images/FOS25-3380.jpg?w=200&h=200&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750846499&s=8c1a07d60970e114e350dc38945f6bad");
+    /* background-image: url("https://rise-atseven.transforms.svdcdn.com/production/images/FOS25-3380.jpg?w=200&h=200&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750846499&s=8c1a07d60970e114e350dc38945f6bad"); */
     background-position: center;
     background-size: cover;
     transform: translateY(2px);
@@ -9262,8 +9263,8 @@ input {
     border-radius: 999px !important;
     background: transparent !important;
     color: #050505 !important;
-    font-size: 24px !important;
-    font-weight: 600 !important;
+    font-size: 35px !important;
+    font-weight: 400 !important;
     line-height: 1 !important;
     letter-spacing: -0.075em !important;
     gap: 9px !important;
@@ -9771,4 +9772,43 @@ input {
   font-size: 1em;
   font-weight: 400;
   line-height: 1;
+}
+
+/* Final shared CTA arrow repair for the manifesto buttons. */
+.arrow-button .button-arrow {
+  display: inline-grid !important;
+  place-items: center !important;
+  width: 0.9em !important;
+  height: 0.9em !important;
+  margin-top: 0.08em !important;
+  color: currentColor !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.arrow-button .button-arrow::before {
+  content: "\2197" !important;
+  display: block !important;
+  color: currentColor !important;
+  font-size: 0.88em !important;
+  line-height: 1 !important;
+}
+
+.manifesto .arrow-button__line,
+.manifesto__buttons .arrow-button__line {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+/* Live-site scroll behavior: hide nav while scrolling down, reveal on upward scroll. */
+body.is-nav-hidden:not(.is-menu-open) .hero--live .header {
+  transform: translateY(-130%) !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+body:not(.is-nav-hidden) .hero--live .header {
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }

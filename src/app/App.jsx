@@ -263,15 +263,28 @@ export function App() {
     window.addEventListener('touchmove', handleWorkTouchMove, { passive: false })
 
     let scrollClassTimer
+    let lastHeaderScrollY = window.scrollY
     const syncHeaderPosition = () => {
+      const currentScrollY = window.scrollY
+      const isScrollingDown = currentScrollY > lastHeaderScrollY + 4
+      const isScrollingUp = currentScrollY < lastHeaderScrollY - 4
+
       clearTimeout(scrollClassTimer)
       document.body.classList.add('is-mobile-scrolling')
-      document.body.classList.toggle('is-past-hero', window.scrollY > 120)
+      document.body.classList.toggle('is-past-hero', currentScrollY > 120)
+      if (isScrollingDown && currentScrollY > 120) {
+        document.body.classList.add('is-nav-hidden')
+      } else if (isScrollingUp || currentScrollY <= 120) {
+        document.body.classList.remove('is-nav-hidden')
+      }
+      lastHeaderScrollY = currentScrollY
+
       scrollClassTimer = window.setTimeout(() => {
         document.body.classList.remove('is-mobile-scrolling')
       }, 180)
     }
     document.body.classList.toggle('is-past-hero', window.scrollY > 120)
+    document.body.classList.remove('is-nav-hidden')
     window.addEventListener('scroll', syncHeaderPosition, { passive: true })
 
     return () => {
@@ -282,6 +295,7 @@ export function App() {
       window.removeEventListener('touchstart', handleWorkTouchStart)
       window.removeEventListener('touchmove', handleWorkTouchMove)
       window.removeEventListener('scroll', syncHeaderPosition)
+      document.body.classList.remove('is-nav-hidden')
       clearTimeout(scrollClassTimer)
       ScrollTrigger.getAll().forEach((t) => t.kill())
     }

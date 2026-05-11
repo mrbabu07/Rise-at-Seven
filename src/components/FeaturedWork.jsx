@@ -24,27 +24,27 @@ export function FeaturedWork({ featuredWork }) {
   }, [activeWork])
 
   useEffect(() => {
-    gsap.utils.toArray('.work-card').forEach((card, i) => {
-      ScrollTrigger.create({
-        trigger: card,
-        start: 'top 55%',
-        end: 'bottom 55%',
-        onEnter: () => setActiveWork(i),
-        onEnterBack: () => setActiveWork(i),
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray('.work-card').forEach((card, i) => {
+        ScrollTrigger.create({
+          trigger: card,
+          start: 'top 55%',
+          end: 'bottom 55%',
+          onEnter: () => setActiveWork(i),
+          onEnterBack: () => setActiveWork(i),
+        })
+        
+        const img = card.querySelector('img')
+        if (img) {
+          gsap.fromTo(img, 
+            { y: '-10%', scale: 1.15 }, 
+            { y: '10%', scale: 1, ease: 'none', scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: true } }
+          )
+        }
       })
-      
-      const img = card.querySelector('img')
-      if (img) {
-        gsap.fromTo(img, 
-          { y: '-10%', scale: 1.15 }, 
-          { y: '10%', scale: 1, ease: 'none', scrollTrigger: { trigger: card, start: 'top bottom', end: 'bottom top', scrub: true } }
-        )
-      }
     })
 
-    return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill())
-    }
+    return () => ctx.revert()
   }, [])
 
   return (

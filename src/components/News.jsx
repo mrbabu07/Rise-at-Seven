@@ -1,11 +1,19 @@
 import { SectionTitle, ArrowButton } from './index.jsx'
 import './News.css'
 
+const titleImage =
+  'https://rise-atseven.transforms.svdcdn.com/production/images/FOS25-3380.jpg?w=200&h=200&q=80&fm=webp&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&dm=1750846499&s=8c1a07d60970e114e350dc38945f6bad'
+
 export function News({ news }) {
   return (
     <section className="news section-pad" id="blog">
       <div className="section-head" data-reveal>
-        <SectionTitle kicker="What's">New</SectionTitle>
+        <SectionTitle kicker="What's">
+          <span className="news-title">
+            <img src={titleImage} alt="" className="news-title__image" loading="lazy" />
+            New
+          </span>
+        </SectionTitle>
         <ArrowButton href="https://riseatseven.com/blog/">Explore More Thoughts</ArrowButton>
       </div>
       <div className="news-grid">
