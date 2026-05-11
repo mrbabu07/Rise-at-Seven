@@ -188,10 +188,15 @@ export function ArrowButton({ children, variant = 'light', href = '#contact' }) 
   return (
     <a className={`arrow-button arrow-button--${variant}`} href={href}>
       <span className="arrow-button__text-wrap">
-        <span className="arrow-button__text">{children}</span>
-        <span className="arrow-button__text" aria-hidden="true">{children}</span>
+        <span className="arrow-button__line">
+          <span className="arrow-button__text">{children}</span>
+          <span className="button-arrow" aria-hidden="true" />
+        </span>
+        <span className="arrow-button__line" aria-hidden="true">
+          <span className="arrow-button__text">{children}</span>
+          <span className="button-arrow" aria-hidden="true" />
+        </span>
       </span>
-      <i className="fa-solid fa-arrow-right" aria-hidden="true" />
     </a>
   )
 }

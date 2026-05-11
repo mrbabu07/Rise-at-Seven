@@ -55,8 +55,14 @@ export function Hero({ navigation, heroImages, awardBadges }) {
 
         <a href="https://riseatseven.com/connect-with-us/" className="header-cta">
           <span className="cta-text-stack">
-            <span>Get In Touch</span>
-            <span aria-hidden="true">Get In Touch</span>
+            <span className="cta-text-line">
+              <span>Get In Touch</span>
+              <span className="cta-text-arrow" aria-hidden="true" />
+            </span>
+            <span className="cta-text-line" aria-hidden="true">
+              <span>Get In Touch</span>
+              <span className="cta-text-arrow" aria-hidden="true" />
+            </span>
           </span>
         </a>
 
@@ -114,10 +120,15 @@ export function Hero({ navigation, heroImages, awardBadges }) {
 
             <a href="https://riseatseven.com/connect-with-us/" className="mobile-panel__cta" onClick={() => setIsMobilePanelOpen(false)}>
               <span className="cta-text-stack">
-                <span>Get In Touch</span>
-                <span aria-hidden="true">Get In Touch</span>
+                <span className="cta-text-line">
+                  <span>Get In Touch</span>
+                  <span className="cta-text-arrow" aria-hidden="true" />
+                </span>
+                <span className="cta-text-line" aria-hidden="true">
+                  <span>Get In Touch</span>
+                  <span className="cta-text-arrow" aria-hidden="true" />
+                </span>
               </span>
-              <span aria-hidden="true">↗</span>
             </a>
           </div>
         )}
