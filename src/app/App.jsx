@@ -122,32 +122,66 @@ export function App() {
 
     // Legacy Stack Peeling Animation
     if (legacyLiveRef.current && legacyCardsRefs.current.length > 0 && window.matchMedia('(min-width: 701px)').matches) {
+      const cards = legacyCardsRefs.current.filter(Boolean)
+      gsap.set(cards, {
+        clearProps: 'opacity,visibility',
+        transformOrigin: '50% 100%',
+      })
+      gsap.set(cards[0], { y: 0, rotation: 3, scale: 1 })
+      gsap.set(cards[1], { y: 14, rotation: -6, scale: 0.99 })
+      gsap.set(cards[2], { y: 28, rotation: -10, scale: 0.98 })
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: legacyLiveRef.current,
-          start: 'center center', // Animation starts when the section center reaches viewport center
-          end: '+=1',
+          start: 'center center',
+          end: '+=220%',
           pin: true,
-          scrub: 1,
+          pinSpacing: true,
+          scrub: 1.1,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
         }
       })
       
-      // Card 1 (Pioneers) flies up and rotates left slowly
-      tl.to(legacyCardsRefs.current[0], {
+      tl.to(cards[0], {
         yPercent: -150,
-        opacity: 0,
-        rotation: -15, // Soft left rotation
-        duration: 1
+        xPercent: -28,
+        rotation: -18,
+        scale: 0.96,
+        ease: 'none',
+        duration: 1,
       })
-      
-      // Card 2 (Award Winning) flies up and rotates left slowly
-      tl.to(legacyCardsRefs.current[1], {
+      tl.to(cards[1], {
+        y: 0,
+        rotation: 2,
+        scale: 1,
+        ease: 'none',
+        duration: 1,
+      }, '<')
+      tl.to(cards[2], {
+        y: 14,
+        rotation: -6,
+        scale: 0.99,
+        ease: 'none',
+        duration: 1,
+      }, '<')
+      tl.to(cards[1], {
         yPercent: -150,
-        opacity: 0,
-        rotation: -25, // Soft left rotation
-        duration: 1
-      }, "<0.8") // "<0.8" means start 0.8 seconds after the start of the previous animation (which is 1 second long)
-      // Card 3 stays
+        xPercent: 26,
+        rotation: 18,
+        scale: 0.96,
+        ease: 'none',
+        duration: 1,
+      }, '+=0.18')
+      tl.to(cards[2], {
+        y: 0,
+        rotation: 3,
+        scale: 1,
+        ease: 'none',
+        duration: 1,
+      }, '<')
+      tl.to({}, { duration: 0.45 })
     }
 
     // Ready to Rise Wave Marquee — scrolling down moves text LEFT, up moves it RIGHT

@@ -132,11 +132,16 @@
   text-decoration: none !important;
 }
 
-.hero--live .header-cta::after {
-  content: "\2197";
-  margin-left: 8px;
-  font-size: 0.85em;
-}
+  .hero--live .header-cta::after {
+    content: "\2197";
+    margin-left: 8px;
+    font-size: 0.85em;
+  }
+
+  .hero--live .header-cta .cta-text-stack,
+  .hero--live .header-cta .cta-text-stack span {
+    color: inherit !important;
+  }
 
 .hero--live .menu-button {
   justify-self: end !important;

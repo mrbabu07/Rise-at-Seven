@@ -9496,3 +9496,185 @@ input {
 .footer__email-btn:hover svg {
   transform: rotate(45deg) !important;
 }
+
+/* Final button polish: live-site pill style with rolling text and arrow motion. */
+.announcement-bar,
+.announcement-bar__text-wrap,
+.announcement-bar__item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.announcement-bar__text-wrap {
+  width: 100% !important;
+}
+
+.announcement-bar__item {
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+.announcement-bar__text {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: auto !important;
+}
+
+.arrow-button,
+.header-cta,
+.mobile-panel__cta,
+.footer__social-link {
+  position: relative !important;
+  overflow: hidden !important;
+  border-radius: 999px !important;
+  transition:
+    border-radius 360ms cubic-bezier(0.16, 1, 0.3, 1),
+    background 260ms ease,
+    color 260ms ease,
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.arrow-button {
+  border: 0 !important;
+  min-height: 46px !important;
+  padding: 0 26px !important;
+  background: #fff !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.055em !important;
+  text-decoration: none !important;
+  justify-content: center !important;
+  gap: 0 !important;
+}
+
+.arrow-button .arrow-button__text-wrap,
+.manifesto .arrow-button .arrow-button__text-wrap,
+.manifesto__buttons .arrow-button .arrow-button__text-wrap,
+.work-explore .arrow-button .arrow-button__text-wrap,
+.services-live .arrow-button .arrow-button__text-wrap,
+.news .arrow-button .arrow-button__text-wrap {
+  position: relative !important;
+  display: inline-grid !important;
+  align-items: flex-start !important;
+  height: 1em !important;
+  line-height: 1 !important;
+  overflow: hidden !important;
+  transform: none !important;
+}
+
+.arrow-button__text,
+.arrow-button__text[aria-hidden="true"],
+.arrow-button__text:not(:first-child) {
+  display: block !important;
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  transform: translateY(0) !important;
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.arrow-button__text[aria-hidden="true"] {
+  transform: translateY(100%) !important;
+}
+
+.arrow-button i,
+.header-cta::after,
+.mobile-panel__cta span,
+.footer__social-link svg {
+  transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.arrow-button i {
+  display: inline-grid !important;
+  place-items: center !important;
+  width: auto !important;
+  height: auto !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: currentColor !important;
+  transform: none !important;
+}
+
+.arrow-button:hover,
+.header-cta:hover,
+.mobile-panel__cta:hover,
+.footer__social-link:hover {
+  border-radius: 14px !important;
+  transform: none !important;
+}
+
+.arrow-button:hover .arrow-button__text {
+  transform: translateY(-100%) !important;
+}
+
+.arrow-button:hover .arrow-button__text[aria-hidden="true"] {
+  transform: translateY(0) !important;
+}
+
+.header-cta:hover::after,
+.mobile-panel__cta:hover span,
+.footer__social-link:hover svg {
+  transform: rotate(45deg) !important;
+}
+
+.header-cta,
+.mobile-panel__cta {
+  gap: 8px !important;
+}
+
+.cta-text-stack {
+  display: inline-grid !important;
+  flex-direction: column !important;
+  height: 1em !important;
+  line-height: 1 !important;
+  overflow: hidden !important;
+  color: inherit !important;
+}
+
+.cta-text-stack span {
+  display: block !important;
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  color: inherit !important;
+  transform: translateY(0) !important;
+  transition: transform 420ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.cta-text-stack span[aria-hidden="true"] {
+  transform: translateY(100%) !important;
+}
+
+.header-cta:hover .cta-text-stack span,
+.mobile-panel__cta:hover .cta-text-stack span {
+  transform: translateY(-100%) !important;
+}
+
+.header-cta:hover .cta-text-stack span[aria-hidden="true"],
+.mobile-panel__cta:hover .cta-text-stack span[aria-hidden="true"] {
+  transform: translateY(0) !important;
+}
+
+.manifesto .button-row .arrow-button:nth-child(2),
+.manifesto__buttons .arrow-button:nth-child(2) {
+  background: transparent !important;
+  padding-inline: 0 !important;
+}
+
+.manifesto .button-row .arrow-button:nth-child(2):hover,
+.manifesto__buttons .arrow-button:nth-child(2):hover {
+  background: #fff !important;
+}
+
+@media (max-width: 700px) {
+  .arrow-button:hover,
+  .header-cta:hover,
+  .mobile-panel__cta:hover,
+  .footer__social-link:hover {
+    border-radius: 999px !important;
+  }
+}

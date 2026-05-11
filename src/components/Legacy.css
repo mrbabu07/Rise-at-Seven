@@ -1,8 +1,7 @@
-/* Legacy Section Styles - Exact Original from global.css */
-
 .legacy-live {
-  min-height: 1200px;
-  padding-top: 130px;
+  position: relative;
+  min-height: 120vh;
+  padding: clamp(92px, 1vw, 130px) 24px clamp(110px, 12vw, 170px);
   overflow: hidden;
   background: #efeeec;
   text-align: center;
@@ -10,52 +9,54 @@
 
 .legacy-live > h2 {
   width: max-content;
-  margin: 0 0 110px 50%;
-  transform: translateX(-50%);
-  color: var(--black);
-  font-size: clamp(130px, 15vw, 230px);
+  max-width: 9vw;
+  margin: 0 auto clamp(51px, 4vw, 110px);
+  color: var(--black, #050505);
+  font-size: clamp(20px, 1vw, 230px);
   font-weight: 500;
   line-height: 0.86;
-  letter-spacing: -0.09em;
+  letter-spacing: 0;
   white-space: nowrap;
 }
 
 .legacy-live > h2 img {
   display: inline-block;
-  width: clamp(110px, 11vw, 170px);
+  width: clamp(92px, 10.5vw, 170px);
   aspect-ratio: 1;
-  margin: 0 28px -10px;
+  margin: 0 clamp(14px, 2vw, 28px) -0.05em;
   border-radius: 18px;
   object-fit: cover;
+  vertical-align: baseline;
 }
 
-.legacy-live > p {
-  margin: 0 0 80px;
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: -0.06em;
+.legacy-mobile-title {
+  display: none;
 }
 
 .legacy-stack {
   position: relative;
   width: min(570px, 76vw);
-  height: 800px;
+  height: 790px;
   margin: 0 auto;
+  isolation: isolate;
 }
 
 .legacy-card-item {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0 auto auto 0;
   width: 100%;
-  display: flex;
+  min-height: 650px;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   gap: 18px;
-  padding: 76px 58px 86px;
+  padding: 72px 12px 10px;
   border-radius: 24px;
-  transform-origin: center bottom;
-  will-change: transform;
+  box-shadow: 0 28px 70px rgba(5, 5, 5, 0.12);
+  transform-origin: 50% 100%;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 .legacy-stack img {
@@ -63,75 +64,109 @@
   aspect-ratio: 1;
   border-radius: 16px;
   object-fit: cover;
+  flex: 0 0 auto;
 }
 
 .legacy-stack h3 {
   margin: 0;
-  font-size: 62px;
+  font-size: clamp(52px, 5.2vw, 68px);
   font-weight: 500;
   line-height: 0.92;
-  letter-spacing: -0.08em;
+  letter-spacing: 0;
 }
 
 .legacy-stack p {
   max-width: 430px;
   margin: 0;
+  text-align: center;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.12;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
 }
 
-/* Mobile Responsive */
 @media (max-width: 980px) {
   .legacy-live > h2 {
-    font-size: clamp(82px, 22vw, 128px);
-  }
-}
-
-@media (max-width: 620px) {
-  .legacy-live {
-    padding: 56px 16px 48px;
-    min-height: auto;
-  }
-
-  .legacy-live > p {
-    font-size: 16px;
-    margin-bottom: 44px;
-  }
-
-  .legacy-live > h2 {
-    font-size: clamp(56px, 15vw, 120px);
-    margin-bottom: 56px;
-  }
-
-  .legacy-live > h2 img {
-    width: clamp(65px, 12vw, 110px);
-    margin: 0 14px -6px;
-    border-radius: 14px;
+    font-size: clamp(72px, 16vw, 128px);
+    white-space: normal;
   }
 
   .legacy-stack {
-    width: min(94vw, 420px);
-    height: 620px;
+    width: min(88vw, 520px);
+    height: 720px;
   }
 
   .legacy-card-item {
-    padding: 48px 28px 56px;
-    border-radius: 20px;
+    min-height: 650px;
+    padding: 60px 42px 68px;
+  }
+}
+
+@media (max-width: 700px) {
+  .legacy-live {
+    min-height: auto !important;
+    padding: 0 9px 44px !important;
+  }
+
+  .legacy-live > h2 {
+    display: none !important;
+  }
+
+  .legacy-mobile-title {
+    display: block;
+    margin: 0 0 12px !important;
+    color: #050505;
+    font-size: 12px !important;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .legacy-stack {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    display: grid !important;
+    gap: 10px;
+    margin: 0 auto !important;
+  }
+
+  .legacy-card-item {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-height: auto;
+    display: flex !important;
+    gap: 12px;
+    padding: 20px 20px 22px !important;
+    border-radius: 9px !important;
+    box-shadow: none;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .legacy-card-item:nth-child(n + 2) {
+    display: none !important;
   }
 
   .legacy-stack img {
-    width: 110px;
-    border-radius: 14px;
+    width: 100% !important;
+    max-width: none;
+    aspect-ratio: 1.12 / 1 !important;
+    border-radius: 7px !important;
+    object-fit: cover;
   }
 
   .legacy-stack h3 {
-    font-size: clamp(36px, 8.5vw, 50px);
+    font-size: clamp(24px, 7.6vw, 32px) !important;
+    line-height: 0.9 !important;
+    letter-spacing: 0;
   }
 
   .legacy-stack p {
-    font-size: 14px;
-    line-height: 1.15;
+    max-width: 270px !important;
+    font-size: 11px !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0;
   }
 }

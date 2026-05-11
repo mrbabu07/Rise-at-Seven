@@ -53,7 +53,12 @@ export function Hero({ navigation, heroImages, awardBadges }) {
           ))}
         </nav>
 
-        <a href="https://riseatseven.com/connect-with-us/" className="header-cta">Get In Touch</a>
+        <a href="https://riseatseven.com/connect-with-us/" className="header-cta">
+          <span className="cta-text-stack">
+            <span>Get In Touch</span>
+            <span aria-hidden="true">Get In Touch</span>
+          </span>
+        </a>
 
         <button
           className="menu-button"
@@ -108,7 +113,11 @@ export function Hero({ navigation, heroImages, awardBadges }) {
             })}
 
             <a href="https://riseatseven.com/connect-with-us/" className="mobile-panel__cta" onClick={() => setIsMobilePanelOpen(false)}>
-              Get In Touch <span aria-hidden="true">↗</span>
+              <span className="cta-text-stack">
+                <span>Get In Touch</span>
+                <span aria-hidden="true">Get In Touch</span>
+              </span>
+              <span aria-hidden="true">↗</span>
             </a>
           </div>
         )}
